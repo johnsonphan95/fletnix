@@ -71,7 +71,7 @@ class SessionForm extends React.Component {
                 </form>
                 <div className="session-form-footer">
                     <label>
-                        New to Netflix?
+                        New to Fletnix?
                         <Link to="/" className="session-signup-link"> Sign up now.</Link>
                     </label>
                 </div>
