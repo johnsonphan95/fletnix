@@ -1,0 +1,18 @@
+.signin-link {
+    position: absolute;
+    color: white;
+    background-color: red;
+    padding: 10px 20px;
+    border: red;
+    border-radius: 3px;
+    text-decoration: none;
+    right: 3%;
+    top: 2%;
+}
+
+.greeting-offer {
+    color: white;
+    display: flex;
+    justify-content: center;
+    top: 30%;
+}

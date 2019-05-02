@@ -1,4 +1,4 @@
-import 'React' from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 
 export const GreetingHome = () => (
@@ -7,4 +7,4 @@ export const GreetingHome = () => (
             <Link to="/signup">Watch Free For 30 Days</Link>
         </div>
     </div>
-)
+);

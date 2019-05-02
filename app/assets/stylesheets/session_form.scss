@@ -9,7 +9,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: -4;
 }
 
 .splash-background:after{
@@ -21,7 +20,7 @@
     left: 0;
     background-color: black;
     opacity: .5 ;
-    z-index: -5;
+    z-index: -1;
 }
 
 .session-form-container {
@@ -29,17 +28,37 @@
     background: black;
     opacity: .7;
     color:white;
+    padding: 20px;
 }
 
 .session-form {
     color: black;
-    margin: 300px 100px;
     text-align: center;
+    padding: 30px 50px;
 }
 
 .session-submit {
     background-color: red;
     border: red;
     color: white;
+    height: 50px;
+    width: 305px;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+.session-form-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    float: left;
+    margin-bottom: 30px;
     
+}
+
+.session-form-input {
+    border-radius: 3px;
+    height: 30px; 
+    width: 300px;
+    font-size: 15px;
 }
