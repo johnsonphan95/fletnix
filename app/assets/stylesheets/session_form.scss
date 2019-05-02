@@ -37,13 +37,15 @@
 }
 
 .session-submit {
-    background-color: red;
-    border: red;
+    background-color: #E50914;
+    border: #E50914;
     color: white;
     height: 50px;
     width: 300px;
+    margin-top: 10px;
     border-radius: 3px;
-    font-size: 15px;
+    font-size: 16px;
+
 }
 
 .session-form-title {
@@ -66,7 +68,7 @@
 }
 
 .session-form-footer {
-    margin: 20px 50px;
+    margin: 20px 35px;
     color: grey;
     font-size: 18px;
 }
@@ -75,4 +77,12 @@
     text-decoration: none;
     color: white;
     font-size: 18px;
+}
+
+.session-form-errors {
+    color: orange;
+    padding-bottom: 10px;
+    font-weight: 100;
+    margin-bottom: 10px;
+    margin-top: -5px;
 }

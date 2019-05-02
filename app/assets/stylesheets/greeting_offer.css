@@ -20,12 +20,14 @@
 }
 
 .greeting-message {
-    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 65px;
     font-weight: bold;
     text-align: center;
 }
 
 .greeting-submessage {
+    font-family: Helvetica;
     font-size: 25px;
     text-align: center;
     margin: 20px;
@@ -34,9 +36,10 @@
 .greeting-trial-button {
     border: 0;
     border-radius: 3px;
-    background: red;
+    background: #E50914;
     padding: 15px 70px;
     text-decoration: none;
     color: white;
     font-size: 26px;
+    font-family: Helvetica ;
 }

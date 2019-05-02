@@ -11,7 +11,7 @@ export const GreetingOffer = () => (
             <h2 className="greeting-submessage">
                 Watch anywhere. Cancel anytime.
             </h2>
-            <Link className="greeting-trial-button" to="/signup">WATCH FREE FOR 30 DAYS ></Link>
+            <Link className="greeting-trial-button" to="/signup">WATCH FREE FOR 30 DAYS</Link>
         </div>
     </div>
 );

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Greeting = ({currentUser, logout}) => {
+const Greeting = ({currentUser, logout}, props) => {
     const sessionLinks = () => (
         <div>
             <nav className="greeting-nav">
+                <Link className="header-logo" to="/"><img src="https://fontmeme.com/permalink/190502/78603fb0480f9521f3a09ec1be1bbe6c.png"/></Link>
                 <Link className="signin-link" to="/login">Sign In</Link>  
             </nav>  
         </div>

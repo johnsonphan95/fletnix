@@ -24,7 +24,7 @@ class SessionForm extends React.Component {
 
     renderErrors(){
         return(
-            <ul>
+            <ul className="session-form-errors">
                 {this.props.errors.map( (error, i) => {
                     return(
                         <li key={i}>
@@ -60,8 +60,7 @@ class SessionForm extends React.Component {
                 <div className="session-form-footer">
                     <label>
                         New to Netflix?
-                        &nbsp;
-                        <Link to="/" className="session-signup-link">Sign up now.</Link>
+                        <Link to="/" className="session-signup-link"> Sign up now.</Link>
                     </label>
                 </div>
             </div>
