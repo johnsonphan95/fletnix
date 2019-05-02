@@ -9,17 +9,21 @@ import {
 import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
-import {GreetingOffer} from './greeting/greeting_offer';
-import {AuthRoute} from '../util/route_util';
+import { GreetingOffer } from './greeting/greeting_offer';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import Placeholder from './placeholder';
 
 const App = () => (
     <div>
         <header>
             <GreetingContainer />
         </header>
-        <AuthRoute exact path="/login" component={LoginFormContainer}/>
-        <AuthRoute exact path="/signup" component={SignUpFormContainer}/>
-        <AuthRoute exact path="/" component={GreetingOffer}/>
+        <Switch>
+            <ProtectedRoute exact path="/browse" component={Placeholder} />
+            <AuthRoute exact path="/login" component={LoginFormContainer}/>
+            <AuthRoute exact path="/signup" component={SignUpFormContainer}/>
+            <AuthRoute exact path="/" component={GreetingOffer}/>
+        </Switch>
     </div>
 )
 export default App;
