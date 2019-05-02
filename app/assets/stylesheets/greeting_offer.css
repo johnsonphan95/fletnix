@@ -1,0 +1,42 @@
+.greeting-background {
+    background-image: url("https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/hero-background.jpg");
+    background-repeat: no-repeat;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    background-size: 100%;
+    z-index: -1;
+}
+
+.greeting-offer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.greeting-message {
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.greeting-submessage {
+    font-size: 25px;
+    text-align: center;
+    margin: 20px;
+}
+
+.greeting-trial-button {
+    border: 0;
+    border-radius: 3px;
+    background: red;
+    padding: 15px 70px;
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+}

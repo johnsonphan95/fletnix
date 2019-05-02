@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class SessionForm extends React.Component {
     constructor(props){
@@ -12,7 +13,7 @@ class SessionForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.processForm(this.state);
+        this.props.processForm(this.state).then(() => this.props.history.push("/browse"));
     }
 
     update(field){
@@ -40,8 +41,8 @@ class SessionForm extends React.Component {
             <div className="session-form-container">
                 <form onSubmit={this.handleSubmit}>
                     <div className="session-form">
-                    <h1 className="session-form-title">{this.props.formType}</h1>
-                        {this.renderErrors()}
+                        <h1 className="session-form-title">{this.props.formType}</h1>
+                        <br/>
                         <label>
                             <input className="session-form-input" type="text" placeholder="Email" value={this.state.email} onChange={this.update('email')} />
                         </label>
@@ -52,9 +53,17 @@ class SessionForm extends React.Component {
                         </label>
                         <br/>
                         <br/>
+                        {this.renderErrors()}
                         <input type="submit" className="session-submit" value={this.props.formType} />
                     </div>
                 </form>
+                <div className="session-form-footer">
+                    <label>
+                        New to Netflix?
+                        &nbsp;
+                        <Link to="/" className="session-signup-link">Sign up now.</Link>
+                    </label>
+                </div>
             </div>
         )
     }

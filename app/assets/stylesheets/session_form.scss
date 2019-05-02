@@ -25,8 +25,7 @@
 
 .session-form-container {
     position: absolute;
-    background: black;
-    opacity: .7;
+    background: rgba(7,7,7, 0.8);
     color:white;
     padding: 20px;
 }
@@ -34,7 +33,7 @@
 .session-form {
     color: black;
     text-align: center;
-    padding: 30px 50px;
+    padding: 30px 50px 300px 50px;
 }
 
 .session-submit {
@@ -42,7 +41,7 @@
     border: red;
     color: white;
     height: 50px;
-    width: 305px;
+    width: 300px;
     border-radius: 3px;
     font-size: 15px;
 }
@@ -53,12 +52,27 @@
     color: white;
     float: left;
     margin-bottom: 30px;
-    
 }
 
 .session-form-input {
-    border-radius: 3px;
+    background-color: #333333;
+    box-sizing: border-box;
+    border-radius: 5px;
     height: 30px; 
     width: 300px;
     font-size: 15px;
+    padding: 25px;
+    border: 0;
+}
+
+.session-form-footer {
+    margin: 20px 50px;
+    color: grey;
+    font-size: 18px;
+}
+
+.session-signup-link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
 }
