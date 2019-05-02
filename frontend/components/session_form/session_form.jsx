@@ -49,8 +49,8 @@ class SessionForm extends React.Component {
     content(){
         return (
             <div className="session-form-container">
-                <form onSubmit={this.handleSubmit}>
-                    <div className="session-form">
+                <form className="session-form-outside" onSubmit={this.handleSubmit}>
+                    <div className="session-form-inside">
                         <h1 className="session-form-title">{this.props.formType}</h1>
                         <br/>
                         <label>
@@ -70,7 +70,7 @@ class SessionForm extends React.Component {
                     </div>
                 </form>
                 <div className="session-form-footer">
-                    <label>
+                    <label className="session-form-footer-label">
                         New to Fletnix?
                         <Link to="/" className="session-signup-link"> Sign up now.</Link>
                     </label>

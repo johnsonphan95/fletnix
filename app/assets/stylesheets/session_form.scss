@@ -1,6 +1,8 @@
 .splash-background {
+    background-color: black;
     background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/0649986d-7b39-4efc-a160-9fa5f49090ce/4cd4126d-b657-4d9f-9ca6-8da32b554e79/US-en-20190429-popsignuptwoweeks-perspective_alpha_website_large.jpg");
     position: absolute;
+    background-size: cover;
     top: 0;
     bottom: 0;
     left: 0;
@@ -25,52 +27,81 @@
 
 .session-form-container {
     position: absolute;
+    top: 10%;
     background: rgba(7,7,7, 0.8);
+    border-radius: 5px;
     color:white;
-    padding: 20px;
+    height: 650px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.session-form {
+.session-form-outside {
+    position: relative;
     color: black;
     text-align: center;
-    padding: 30px 50px 300px 50px;
+    padding-top: 20px;
+    width: 70%;
 }
 
 .session-submit {
+    position: relative;
     background-color: #E50914;
     border: #E50914;
     color: white;
-    height: 50px;
-    width: 300px;
+    height: 40px;
+    width: 100%;
     margin-top: 10px;
     border-radius: 3px;
     font-size: 16px;
 
 }
 
+.session-demo-button {
+    position: relative;
+    background-color: #E50914;
+    border: #E50914;
+    color: white;
+    height: 40px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
 .session-form-title {
+    position: relative;
     font-size: 30px;
     font-weight: bold;
     color: white;
+    margin-bottom: 35px;
+    margin-top: 15%;
     float: left;
-    margin-bottom: 30px;
 }
 
 .session-form-input {
+    position: relative;
     background-color: #333333;
     box-sizing: border-box;
     border-radius: 5px;
-    height: 30px; 
-    width: 300px;
+    height: 20px; 
+    width: 100%;
     font-size: 16px;
     font-weight: lighter;
+    margin: 0;
     padding: 25px;
     border: 0;
     color: white;
 }
 
 .session-form-footer {
-    margin: 20px 35px;
+    margin-top: 210px;
+    margin-right: 15%;
+}
+
+.session-form-footer-label {
     color: grey;
     font-size: 18px;
 }
@@ -89,13 +120,3 @@
     margin-top: -5px;
 }
 
-.session-demo-button {
-    background-color: #E50914;
-    border: #E50914;
-    color: white;
-    height: 50px;
-    width: 300px;
-    margin-top: 10px;
-    border-radius: 3px;
-    font-size: 16px;
-}
