@@ -28,7 +28,6 @@ class SessionForm extends React.Component {
                     return(
                         <li key={i}>
                             {error}
-                            <h1>ERROR</h1>
                         </li>
                     )
                 })}
@@ -36,22 +35,35 @@ class SessionForm extends React.Component {
         )
     }
 
-    render(){
-        return(
-            <div className="login-form-container">
-                <h1>{this.props.formType}</h1>
+    content(){
+        return (
+            <div className="session-form-container">
                 <form onSubmit={this.handleSubmit}>
-                    <div className="login-form">
+                <h1>{this.props.formType}</h1>
+                    <div className="session-form">
                         {this.renderErrors()}
-                        <label>Email
-                            <input type="text" value={this.state.email} onChange={this.update('email')}/>
+                        <label>
+                            <input type="text" placeholder="Email" value={this.state.email} onChange={this.update('email')} />
                         </label>
-                        <label>Password
-                            <input type="password" value={this.state.password} onChange={this.update('password')}/>
+                        <br/>
+                        <br/>
+                        <label>
+                            <input type="password" placeholder="Password" value={this.state.password} onChange={this.update('password')} />
                         </label>
+                        <br/>
+                        <br/>
+                        <input type="submit" className="session-submit" value={this.props.formType} />
                     </div>
-                    <input type="submit" className="session-submit" value={this.props.formType}/>
                 </form>
+            </div>
+        )
+    }
+
+    render(){
+        const content = this.content();
+        return(
+            <div className="splash-background">
+                {content}       
             </div>
         )
     }

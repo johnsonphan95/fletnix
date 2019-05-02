@@ -23,7 +23,8 @@
     "test": "test"
   },
   "scripts": {
-    "start": "webpack --watch --mode=development"
+    "start": "webpack --watch --mode=development",
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
@@ -38,5 +39,9 @@
   "homepage": "https://github.com/johnsonphan95/fletnix#readme",
   "devDependencies": {
     "webpack-cli": "^3.3.1"
+  },
+  "engines": {
+    "node": "8.9.4",
+    "npm": "6.9.0"
   }
 }

@@ -18,8 +18,10 @@
 !/storage/.keep
 
 /node_modules
+bundle.js*
 /yarn-error.log
-
+.DS_Store
+npm-debug.log
 /public/assets
 .byebug_history
 

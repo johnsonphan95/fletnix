@@ -15,7 +15,6 @@ const App = () => (
     <div>
         <header>
             <Link to="/" className="home">
-            <h1><marquee behavior="alternate">FLETNIX</marquee></h1>
             </Link>
                 <GreetingContainer />
         </header>
