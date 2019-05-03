@@ -6,4 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(email: "demo@fletnix.com", password: "password")
+demoUser = User.create(email: "demo@fletnix.com", password: "password")
+tarzan = Movie.create(title: "Tarzan", description: "Swinging deez vines", year: 1999, rating: "G", run_time: "1h 28m") 

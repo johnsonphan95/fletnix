@@ -21,6 +21,7 @@
     right: 0;
     left: 0;
     background-color: black;
+    background-size: cover;
     opacity: .5 ;
     z-index: -1;
 }
@@ -53,10 +54,10 @@
     color: white;
     height: 40px;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 50px;
     border-radius: 3px;
     font-size: 16px;
-
+    font-weight: bold;
 }
 
 .session-demo-button {
@@ -69,6 +70,7 @@
     margin-top: 10px;
     border-radius: 3px;
     font-size: 16px;
+    font-weight: bold;
 }
 
 .session-form-title {
@@ -104,6 +106,9 @@
 .session-form-footer-label {
     color: grey;
     font-size: 18px;
+    position: absolute;
+    left: 15%;
+    bottom: 7%;
 }
 
 .session-signup-link {
@@ -113,10 +118,11 @@
 }
 
 .session-form-errors {
-    color: orange;
-    padding-bottom: 10px;
-    font-weight: 100;
-    margin-bottom: 10px;
-    margin-top: -5px;
+    color: #E87c03;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: lighter;
+    float: left;
 }
 

@@ -24,26 +24,29 @@ class SessionForm extends React.Component {
     }
 
     demoSubmit(e){
+        e.preventDefault();
         const demoUser = {
             email: "demo@fletnix.com",
             password: "password"
         }
-        e.preventDefault();
         this.props.processDemo(demoUser).then(() => this.props.history.push("/browse"));
     }
 
-    renderErrors(){
-        return(
-            <ul className="session-form-errors">
-                {this.props.errors.map( (error, i) => {
-                    return(
-                        <li key={i}>
-                            {error}
-                        </li>
-                    )
-                })}
-            </ul>
-        )
+    componentDidMount(){
+        this.props.clearErrors();
+    }
+
+
+    sessionFormFooter(){
+            if(this.props.location.pathname === "/login"){
+                return (
+                <div className="session-form-footer">
+                    <label className="session-form-footer-label">
+                        New to Fletnix?
+                        <Link to="/signup" className="session-signup-link"> Sign up now.</Link>
+                    </label>
+                </div>
+            )}
     }
 
     content(){
@@ -52,29 +55,24 @@ class SessionForm extends React.Component {
                 <form className="session-form-outside" onSubmit={this.handleSubmit}>
                     <div className="session-form-inside">
                         <h1 className="session-form-title">{this.props.formType}</h1>
-                        <br/>
+                            <br/>
                         <label>
                             <input className="session-form-input" type="text" placeholder="Email" value={this.state.email} onChange={this.update('email')} />
                         </label>
-                        <br/>
-                        <br/>
+                            <br/>
+                        <div className="session-form-errors">&nbsp;{this.props.errors["email"]}</div>
+                            <br/>
                         <label>
                             <input className="session-form-input" type="password" placeholder="Password" value={this.state.password} onChange={this.update('password')} />
                         </label>
-                        <br/>
-                        <br/>
-                        {this.renderErrors()}
+                            <br/>
+                        <div className="session-form-errors">&nbsp;{this.props.errors["password"]}</div> 
+                        <div className="session-form-errors">&nbsp;{this.props.errors["login"]}</div> 
                         <input type="submit" className="session-submit" value={this.props.formType} />
-                        <br/>
                         <button onClick={this.demoSubmit} className="session-demo-button">Demo</button>
                     </div>
                 </form>
-                <div className="session-form-footer">
-                    <label className="session-form-footer-label">
-                        New to Fletnix?
-                        <Link to="/" className="session-signup-link"> Sign up now.</Link>
-                    </label>
-                </div>
+                {this.sessionFormFooter()}
             </div>
         )
     }

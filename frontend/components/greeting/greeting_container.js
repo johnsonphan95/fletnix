@@ -3,7 +3,7 @@ import { logout } from '../../actions/session_actions';
 import { withRouter } from 'react-router-dom'
 import Greeting from './greeting';
 
-const mapStateToProps = ({entities, session}) => {
+const mapStateToProps = ({entities, session}, ownProps) => {
     return({
         currentUser: entities.users[session.id]
     })
