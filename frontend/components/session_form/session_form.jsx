@@ -55,19 +55,14 @@ class SessionForm extends React.Component {
                 <form className="session-form-outside" onSubmit={this.handleSubmit}>
                     <div className="session-form-inside">
                         <h1 className="session-form-title">{this.props.formType}</h1>
-                            <br/>
                         <label>
                             <input className="session-form-input" type="text" placeholder="Email" value={this.state.email} onChange={this.update('email')} />
                         </label>
-                            <br/>
                         <div className="session-form-errors">&nbsp;{this.props.errors["email"]}</div>
-                            <br/>
                         <label>
                             <input className="session-form-input" type="password" placeholder="Password" value={this.state.password} onChange={this.update('password')} />
                         </label>
-                            <br/>
-                        <div className="session-form-errors">&nbsp;{this.props.errors["password"]}</div> 
-                        <div className="session-form-errors">&nbsp;{this.props.errors["login"]}</div> 
+                        <div className="session-form-errors">&nbsp;{this.props.errors["password"]}</div>
                         <input type="submit" className="session-submit" value={this.props.formType} />
                         <button onClick={this.demoSubmit} className="session-demo-button">Demo</button>
                     </div>

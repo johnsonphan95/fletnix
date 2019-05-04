@@ -7,7 +7,8 @@ class Api::SessionsController < ApplicationController
             login(@user)
             render 'api/users/show'
         else 
-            render json: { login: ["Please enter a valid email or password"] }, status: 401
+            render json: { email: ["Please enter a valid email"], 
+                           password: ["Password must contain between 6 and 60 characters"] }, status: 401
         end 
     end
 
