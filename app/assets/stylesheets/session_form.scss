@@ -4,6 +4,7 @@
     position: absolute;
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 800px;
     top: 0;
     bottom: 0;
     left: 0;
@@ -18,7 +19,7 @@
     position: absolute;
     content: '';
     top: 0;
-    bottom: 0;
+    bottom: 0; 
     right: 0;
     left: 0;
     background-color: black;

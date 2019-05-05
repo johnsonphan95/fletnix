@@ -1,0 +1,75 @@
+.signin-link {
+    position: absolute;
+    color: white;
+    background-color: #E50914;
+    padding: 10px 20px;
+    border: #E50914;
+    border-radius: 3px;
+    text-decoration: none;
+    right: 3%;
+    top: 2%;
+}
+
+.logo-nav {
+    display: flex;
+}
+
+.header-logo{
+    background-image: url("https://fontmeme.com/permalink/190502/a1f8e1379d4d8d9fa20068c6d47664bc.png") 10px 10px no-repeat;
+    position: absolute;
+    left: 3%;
+    top: 2%;
+}
+
+.greeting-offer {
+    color: white;
+    display: flex;
+    justify-content: center;
+    top: 30%;
+}
+
+.navbar-group {
+    width: 100vw;
+    position: fixed;
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+}
+
+
+.nav-button-ul {
+    list-style-type: none;
+    display: inline;
+}
+
+.nav-logo {
+    position: absolute;
+    left: 3%;
+    top: 50%;
+}
+
+.nav-button-container {
+    position: absolute;
+    left: 12%;
+    top: 30px;
+}
+
+.nav-button {
+    display: inline;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.nav-button-link {
+    color: lightgray;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav-user-dropdown {
+    color: lightgrey;
+    position: absolute;
+    right: 3%;
+}
+
