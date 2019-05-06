@@ -11,10 +11,10 @@ require 'open-uri'
 # apex = Movie.create(title: "Tarzan", description: "", year: 1999, rating: "G", run_time: "1h 28m") 
 # apex.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/fletnix-seeds/apex.webp"), filename: "9")
 
-User.destroy_all
-Movie.destroy_all
-Genre.destroy_all
-MovieGenre.destroy_all
+# User.destroy_all
+# Movie.destroy_all
+# Genre.destroy_all
+# MovieGenre.destroy_all
 
 demoUser = User.create(email: "demo@fletnix.com", password: "password")
 tarzan = Movie.create(title: "Tarzan", description: "After being shipwrecked off the African coast, a lone child grows up in the wild, and is destined to become lord of the jungle.", year: 1999, rating: "G", run_time: "1h 28m") 
