@@ -28,10 +28,10 @@ const NavBar = ({currentUser, logout}) => {
             </div>
             <div className="nav-button-container">
                 <ul className="nav-button-ul">
-                    <li className="nav-button"><Link className="nav-button-link">Home</Link></li>
-                    <li className="nav-button"><Link className="nav-button-link">Movies</Link></li>
-                    <li className="nav-button"><Link className="nav-button-link">Recently Added</Link></li>
-                    <li className="nav-button"><Link className="nav-button-link">My List</Link></li>
+                    <li className="nav-button"><Link className="nav-button-link" to="/">Home</Link></li>
+                    <li className="nav-button"><Link className="nav-button-link" to="/">Movies</Link></li>
+                    <li className="nav-button"><Link className="nav-button-link" to="/">Recently Added</Link></li>
+                    <li className="nav-button"><Link className="nav-button-link" to="/">My List</Link></li>
                 </ul>  
             </div>
             <div className="nav-user-dropdown">
