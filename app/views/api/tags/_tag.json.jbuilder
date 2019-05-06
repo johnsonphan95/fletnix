@@ -1,0 +1,1 @@
+json.extract! tag, :id, :movie_id, :genre_id

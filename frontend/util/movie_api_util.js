@@ -1,4 +1,4 @@
-export const requestMovies = () => (
+export const fetchMovies = () => (
     $.ajax({
         method: "GET", 
         url: 'api/movies'

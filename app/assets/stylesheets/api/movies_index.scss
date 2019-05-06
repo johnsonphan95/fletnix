@@ -6,10 +6,12 @@
 
 .movies-index-container {
     display: flex;
+    width: 100%;
     /* flex-direction: row; */
 }
 
 .movies-index-ul {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -19,5 +21,10 @@
 }
 
 .movie-item {
-    margin: 40px 5px;
+    margin: 40px 2px;
+    width: 16%;
+}
+
+.movie-item-img {
+    width: 100%;
 }

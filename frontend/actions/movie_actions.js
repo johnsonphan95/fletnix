@@ -7,6 +7,8 @@ export const receiveMovies = (movies) => ({
     movies
 })
 
-export const requestMovies = () => dispatch => (
-    MoviesApiUtil.requestMovies().then(movies => dispatch(receiveMovies(movies)))
+
+export const fetchMovies = () => dispatch => (
+    MoviesApiUtil.fetchMovies().then(movies => dispatch(receiveMovies(movies)))
 )
+

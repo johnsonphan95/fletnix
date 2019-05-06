@@ -1,4 +1,5 @@
-json.array! @movies do |movie| 
-    json.extract! movie, :id, :title, :year, :description, :rating, :run_time 
-    json.photoUrl url_for(movie.photo)
+@movies.each do |movie| 
+    json.set! movie.id do
+        json.partial! './api/movies/movie', movie: movie
+    end 
 end

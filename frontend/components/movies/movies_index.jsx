@@ -3,14 +3,16 @@ import React from 'react';
 class moviesIndex extends React.Component {
 
     componentDidMount(){
-        this.props.requestMovies();
+        this.props.fetchMovies();
+        this.props.fetchGenres();
+        this.props.fetchTags();
     }
 
     render(){
         let movies = this.props.movies.map(movie => {
             return (
                 <li className="movie-item" key={movie.id}>
-                    <img src={movie.photoUrl} alt=""/>
+                    <img className="movie-item-img" src={movie.photoUrl} alt=""/>
                 </li>
             )
         })
