@@ -34,6 +34,7 @@
     background-color: transparent;
     color: white;
     padding: 15px;
+    z-index: 1;
 }
 
 

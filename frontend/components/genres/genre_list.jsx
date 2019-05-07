@@ -15,22 +15,22 @@ class GenreList extends React.Component {
         if (Object.values(this.props.movies).length === 0){
             return null
         }
-        // debugger
     
-
         let moviesLists = this.props.moviesList.map(id => {
             return(
-                <li key={id}>
-                    <img src={this.props.movies[id].photoUrl} alt=""/>
-                    {this.props.movies[id].title}
+                <li className="genre-list-li" key={id}>
+                    <img className="genre-item-img" src={this.props.movies[id].photoUrl} alt=""/>
                 </li>
             )
         })
 
         return (
-            <ul>
-                {moviesLists}
-            </ul>
+            <div className="genre-list-container">
+                <div className="genre-list-label">{this.props.genre.genre}</div>
+                <ul className="genre-list-ul">
+                    {moviesLists}
+                </ul>
+            </div>
         )
     }
 }

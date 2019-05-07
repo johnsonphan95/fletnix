@@ -1,0 +1,34 @@
+.genre-list-container {
+    color: white;
+    font-size: 26px;
+    font-weight: 525;
+}
+
+.genre-list-label {
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+
+.genre-list-ul {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.genre-list-li {
+    float: left;
+    margin: 2px;
+    width: 16%;
+    z-index: 0;
+}
+
+.genre-list-li:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(2);
+}
+
+.genre-item-img {
+    width: 100%;
+}
+
+
+

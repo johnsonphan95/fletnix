@@ -22,16 +22,18 @@ class GenreIndex extends React.Component {
         let genres = this.props.genres.map(genre => {           
             return (
                 <li className="genre-index-li" key={genre.id}>
-                    {genre.genre}
-                    <GenreListContainer moviesList={genre.movies}/>
+                    <GenreListContainer moviesList={genre.movies} genre={genre}/>
                 </li>
             )
         })
 
         return( 
-            <div>
-                <div className="genre-index-container">
-                    <ul className="genre-index-ul">
+            <div className="genres-index-background">
+                <div className="main-index-splash">
+                    <div className="bot-gradient"></div>
+                </div>
+                <div className="genres-index-container">
+                    <ul className="genres-index-ul">
                         {genres}
                     </ul>
                 </div>
