@@ -25,11 +25,13 @@ class GenreList extends React.Component {
         })
 
         return (
-            <div className="genre-list-container">
+            <div className="genre-list">
                 <div className="genre-list-label">{this.props.genre.genre}</div>
-                <ul className="genre-list-ul">
-                    {moviesLists}
-                </ul>
+                <div className="genre-list-container">
+                    <ul className="genre-list-ul">
+                        {moviesLists}
+                    </ul>
+                </div>
             </div>
         )
     }

@@ -1,5 +1,6 @@
 import React from 'react';
 import GenreListContainer from './genre_list_container';
+import MainMovie from './main_movie';
 
 class GenreIndex extends React.Component {
     constructor(props){
@@ -29,9 +30,7 @@ class GenreIndex extends React.Component {
 
         return( 
             <div className="genres-index-background">
-                <div className="main-index-splash">
-                    <div className="bot-gradient"></div>
-                </div>
+                <MainMovie />
                 <div className="genres-index-container">
                     <ul className="genres-index-ul">
                         {genres}

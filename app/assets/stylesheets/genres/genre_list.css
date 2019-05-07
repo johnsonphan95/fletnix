@@ -1,8 +1,14 @@
-.genre-list-container {
+.genre-list {
     color: white;
     font-size: 26px;
     font-weight: 525;
+    /* display: grid; 
+    grid-template-columns: repeat(3, 100%); */
 }
+
+/* .genre-list-container {
+    border: 3px solid red;
+} */
 
 .genre-list-label {
     margin-bottom: 15px;
@@ -12,18 +18,19 @@
 .genre-list-ul {
     display: flex;
     flex-wrap: nowrap;
+    /* display: grid;
+    grid-template-columns: repeat(6, auto); */
 }
 
 .genre-list-li {
-    float: left;
-    margin: 2px;
-    width: 16%;
-    z-index: 0;
+    margin: 1px 2px;
 }
 
 .genre-list-li:hover {
-    transition: all .2s ease-in-out;
+    transition: all .4s ease-in-out;
     transform: scale(2);
+    border: 1px solid #141414;
+    margin: 0 5%;
 }
 
 .genre-item-img {
