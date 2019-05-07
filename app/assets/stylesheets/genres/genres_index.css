@@ -19,7 +19,6 @@
     position: absolute;
     top: 560px;
     display: flex;
-    margin: 3.2%;
     flex-direction: column;
     flex-wrap: nowrap;
 }

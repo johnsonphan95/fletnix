@@ -28,13 +28,22 @@
 
 .genre-list-li:hover {
     transition: all .4s ease-in-out;
-    transform: scale(2);
+    transform: scale(1.4);
     border: 1px solid #141414;
-    margin: 0 5%;
+    margin: 0 2%;
 }
 
 .genre-item-img {
     width: 100%;
+}
+
+.arrowButton {
+    background-color: transparent;
+    background-size: cover;
+    border: none;
+    color: white;
+    font-size: 30px;
+    z-index: 1;
 }
 
 
