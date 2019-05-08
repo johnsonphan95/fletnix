@@ -6,21 +6,19 @@ class GenreList extends React.Component {
         super(props);
         this.state = { 
             startIndex: 0, 
-            endIndex: 6
+            endIndex: 6,
+            showLeft: false, 
+            showRight: false
         }
-        this.carouselLeft = this.carouselLeft.bind(this);
-        this.carouselRight = this.carouselRight.bind(this);
-       
+        this.shiftLeft = this.shiftLeft.bind(this);
+        this.shiftRight = this.shiftRight.bind(this);
     }
-
-
-
 
     componentDidMount(){
         this.props.fetchMovies();
     }
 
-    carouselLeft(e){
+    shiftLeft(e){
         e.preventDefault(); 
         if (this.state.startIndex - 6 >= 0) {
             this.setState({
@@ -30,7 +28,7 @@ class GenreList extends React.Component {
         }
     }
 
-    carouselRight(e){
+    shiftRight(e){
         e.preventDefault();
         
         if (this.state.endIndex + 6 <= this.props.genre.moviesLength) {
@@ -44,6 +42,8 @@ class GenreList extends React.Component {
     render(){
         if (Object.values(this.props.movies).length === 0){
             return null
+        } else if (this.props.moviesList === undefined){
+            return null
         }
     
         let moviesLists = this.props.moviesList.slice(this.state.startIndex, this.state.endIndex).map(id => {
@@ -56,12 +56,12 @@ class GenreList extends React.Component {
 
         return (
             <div className="genre-list">
-                <div className="genre-list-label">{this.props.genre.genre}</div>
                 <div className="genre-list-container">
+                <div className="genre-list-label">{this.props.genre.genre}</div>
                     <ul className="genre-list-ul">
-                        <button onClick={this.carouselLeft} className="arrowButton"> L </button>
+                        <div onClick={this.shiftLeft} className="arrowButton"> <i className="fas fa-angle-left"></i> </div>
                         {moviesLists}
-                        <button onClick={this.carouselRight} className="arrowButton"> > </button>
+                        <div onClick={this.shiftRight} className="arrowButton"><i className="fas fa-angle-right"></i></div>
                     </ul>
                 </div>
             </div>

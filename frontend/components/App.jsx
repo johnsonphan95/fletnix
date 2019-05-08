@@ -12,6 +12,7 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import GenreIndexContainer from './genres/genres_index_container';
 import { GreetingOffer } from './navbar/greeting_offer';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import MovieShowContainer from './movies/movie_show_container';
 
 const App = () => (
     <div>
@@ -19,7 +20,9 @@ const App = () => (
             <NavBarContainer />
         </header>
         <Switch>
-            <ProtectedRoute exact path="/browse" component={GenreIndexContainer} />
+            <ProtectedRoute exact path="/watch/:movieId" component={MovieShowContainer} />
+            <ProtectedRoute exact path="/browse/genres/:genreId" component={GenreIndexContainer} />
+            <ProtectedRoute exact path="/browse/" component={GenreIndexContainer} />
             <AuthRoute exact path="/login" component={LoginFormContainer}/>
             <AuthRoute exact path="/signup" component={SignUpFormContainer}/>
             <AuthRoute exact path="/" component={GreetingOffer}/>

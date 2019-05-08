@@ -4,4 +4,9 @@ class Api::MoviesController < ApplicationController
         render :index
     end 
 
+    def show 
+        @movie = Movie.find(params[:id])
+        render :show
+    end 
+
 end
