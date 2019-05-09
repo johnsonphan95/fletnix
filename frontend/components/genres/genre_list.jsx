@@ -31,6 +31,7 @@ class GenreList extends React.Component {
                 startIndex: (this.state.startIndex - 1) ,
                 endIndex: (this.state.endIndex - 1) 
             })
+            
         }
     }
 
