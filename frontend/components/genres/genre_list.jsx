@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 
 class GenreList extends React.Component {
@@ -49,7 +50,9 @@ class GenreList extends React.Component {
         let moviesLists = this.props.moviesList.slice(this.state.startIndex, this.state.endIndex).map(id => {
             return(
                 <li className="genre-list-li" key={id}>
-                    <img className="genre-item-img" src={this.props.movies[id].photoUrl} alt=""/>
+                    <Link className="play-button" to={`/watch/${id}`}>
+                        <img className="genre-item-img" src={this.props.movies[id].photoUrl} alt=""/>
+                    </Link>
                 </li>
             )
         })
@@ -57,7 +60,7 @@ class GenreList extends React.Component {
         return (
             <div className="genre-list">
                 <div className="genre-list-container">
-                <div className="genre-list-label">{this.props.genre.genre}</div>
+                    <div className="genre-list-label"><Link className="genre-link" to={`/browse/genres/${this.props.genre.id}`}>{this.props.genre.genre}</Link></div>
                     <ul className="genre-list-ul">
                         <div onClick={this.shiftLeft} className="arrowButton"> <i className="fas fa-angle-left"></i> </div>
                         {moviesLists}

@@ -1,0 +1,45 @@
+.main-title {
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.main-img {
+    position: absolute;
+    width: 100%;
+}
+
+.main-description-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    left: 4%;
+    top: 22%;
+}
+
+.main-index-splash {
+    position: absolute;
+    width: 100%;
+    height: 38%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(14, 14, 14, 1) 90%);
+    background-size: cover;
+}
+
+.main-description {
+    color: white;  
+    font-size: 22px;
+    width: 80%;
+}
+
+.main-play-button {
+    text-decoration: none; 
+    width: 60px;
+    margin: 30px 0px;
+    color: white;
+    font-size: 25px;
+    background-color: rgba($color: #141414, $alpha: 0.2);
+    padding: 10px 40px;
+    border-radius: 4px;
+}

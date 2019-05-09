@@ -30,7 +30,9 @@ class GenreIndex extends React.Component {
 
         if (Object.values(this.props.genres).length === 0){
             return null
-        }   
+        } else if (Object.values(this.props.movies).length === 0){
+            return null
+        }
 
         if (!this.props.genreId){
             genres = Object.values(this.props.genres).map(genre => {           
@@ -51,12 +53,10 @@ class GenreIndex extends React.Component {
                 }
             }) 
         }
-
         
-
         return( 
             <div className="genres-index-background">
-                <MainMovie />
+                <MainMovie movie={this.props.movies[1]}/>
                 <div className="genres-index-container">
                     <ul className="genres-index-ul">     
                         {this.topGenre()} 

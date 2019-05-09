@@ -1,18 +1,19 @@
 import {connect} from 'react-redux';
 import MovieShow from './movie_show';
 import {withRouter} from 'react-router-dom';
-import {fetchMovie} from '../../actions/movie_actions';
+import {fetchMovies} from '../../actions/movie_actions';
 
 const mapStateToProps = ({entities}, ownProps) => {
+
     return({
-        movies: entities.movies, 
-        movieId: ownProps.match.params.movieId
+        movieId: ownProps.match.params.movieId, 
+        movies: entities.movies
     })
 }
 
 const mapDispatchToProps = dispatch => {
     return({
-        fetchMovie: (id) => dispatch(fetchMovie(id))
+        fetchMovies: (id) => dispatch(fetchMovies(id))
     })
 }
 

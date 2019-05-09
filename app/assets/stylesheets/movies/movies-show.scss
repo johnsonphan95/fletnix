@@ -1,0 +1,26 @@
+.movie-show-background {
+    background-color: black;  
+}
+
+.movie-show-container {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.movie-show-video {
+    height: 100%;
+    max-width: 100%;
+}
+
+.back-button {
+    color: white;
+    position: absolute;
+    left: 3%;
+    top: 7%;
+    font-size: 40px;
+}
+
+.back-button:hover {
+    transform: scale(1.2);
+}
