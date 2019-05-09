@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { Player } from 'video-react';
 
 
 class GenreList extends React.Component {
@@ -15,16 +16,20 @@ class GenreList extends React.Component {
         this.shiftRight = this.shiftRight.bind(this);
     }
 
+    // ref ={(p) => {
+    //     thisplayer = p;
+    // }}
+
     componentDidMount(){
         this.props.fetchMovies();
     }
 
     shiftLeft(e){
         e.preventDefault(); 
-        if (this.state.startIndex - 6 >= 0) {
+        if (this.state.startIndex - 1 >= 0) {
             this.setState({
-                startIndex: (this.state.startIndex - 6) ,
-                endIndex: (this.state.endIndex - 6) 
+                startIndex: (this.state.startIndex - 1) ,
+                endIndex: (this.state.endIndex - 1) 
             })
         }
     }
@@ -32,10 +37,10 @@ class GenreList extends React.Component {
     shiftRight(e){
         e.preventDefault();
         
-        if (this.state.endIndex + 6 <= this.props.genre.moviesLength) {
+        if (this.state.endIndex + 1 <= this.props.genre.moviesLength) {
             this.setState({
-                startIndex: (this.state.startIndex + 6),
-                endIndex: (this.state.endIndex + 6)
+                startIndex: (this.state.startIndex + 1),
+                endIndex: (this.state.endIndex + 1)
             })
         }
     }
@@ -50,9 +55,16 @@ class GenreList extends React.Component {
         let moviesLists = this.props.moviesList.slice(this.state.startIndex, this.state.endIndex).map(id => {
             return(
                 <li className="genre-list-li" key={id}>
-                    <Link className="play-button" to={`/watch/${id}`}>
-                        <img className="genre-item-img" src={this.props.movies[id].photoUrl} alt=""/>
-                    </Link>
+                    {/* <Link className="play-button" to={`/watch/${id}`}>
+                        <Player 
+                            poster={this.props.movies[id].photoUrl}
+                            src={this.props.movies[id].videoUrl}
+                            autoPlay={false}
+                            muted={true}
+                        />
+                    </Link> */}
+                    <Link className="play-button" to={`/watch/${id}`}><img width="100%" src={this.props.movies[id].photoUrl} /></Link>
+                    
                 </li>
             )
         })

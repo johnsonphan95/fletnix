@@ -6,21 +6,40 @@ class GenreIndex extends React.Component {
     constructor(props){
         super(props);
         this.topGenre = this.topGenre.bind(this);
+        this.mainSplashMovie = this.mainSplashMovie.bind(this);
     }
 
     componentDidMount(){
-        this.props.fetchGenres();
         this.props.fetchMovies();
+        this.props.fetchGenres();
+    }
+
+    componentDidUpdate(prevProps){
+        if (this.props.genreId && this.props.genreId !== prevProps.genreId) {
+            window.scrollTo(0,0)
+        }
     }
 
     topGenre(){
         let top = this.props.genres[this.props.genreId]
         if (this.props.genreId){
-            
             return(
                 <div>
                     <GenreListContainer moviesList={top.movies} genre={top} />
                 </div>
+            )
+        }
+    }
+
+    mainSplashMovie(){
+        let firstGenre = this.props.genres[this.props.genreId];
+        if (!this.props.genreId){
+            return (
+                <MainMovie movie={this.props.movies[1]} />
+            )
+        } else {
+            return(
+                <MainMovie movie={this.props.movies[firstGenre.movies[0]]} />
             )
         }
     }
@@ -56,7 +75,8 @@ class GenreIndex extends React.Component {
         
         return( 
             <div className="genres-index-background">
-                <MainMovie movie={this.props.movies[1]}/>
+                {/* <MainMovie movie={this.props.movies[1]}/> */}
+                {this.mainSplashMovie()}
                 <div className="genres-index-container">
                     <ul className="genres-index-ul">     
                         {this.topGenre()} 

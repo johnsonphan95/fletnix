@@ -18,11 +18,19 @@
 .genres-index-ul {
     position: absolute;
     top: 560px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 }
 
+.genres-index-li {
+    width: 100%;
+}
+
+.video-react .video-react-video {
+    position: relative;
+}
 
 
 

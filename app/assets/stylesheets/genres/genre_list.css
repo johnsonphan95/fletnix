@@ -7,7 +7,7 @@
 .genre-list-label {
     margin-bottom: 15px;
     margin-top: 50px;
-    margin-left: 3.5%;
+    margin-left: 3%;
 }
 
 .genre-list-ul {
@@ -19,13 +19,14 @@
 .genre-list-li {
     margin: 1px 2px;
     height: 100%;
+    width: 16%
 }
 
 .genre-list-li:hover {
     transition: all .4s ease-in-out;
     transform: scale(1.4);
     border: 1px solid #141414;
-    margin: 0 2%;
+    margin: 0 3%;
 }
 
 .genre-link {
