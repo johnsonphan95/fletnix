@@ -33,8 +33,8 @@ const NavBar = ({currentUser, logout}) => {
                     <div className="nav-button-container">
                         <ul className="nav-button-ul">
                             <li className="nav-button"><Link className="nav-button-link" to="/">Home</Link></li>
-                            <li className="nav-button"><Link className="nav-button-link" to="/browse/genres/2">Trending Now</Link></li>
-                            <li className="nav-button"><Link className="nav-button-link" to="/browse/genres/3">Recently Added</Link></li>
+                            <li className="nav-button"><Link className="nav-button-link" to="/browse/genres/1">Trending Now</Link></li>
+                            <li className="nav-button"><Link className="nav-button-link" to="/browse/genres/2">Recently Added</Link></li>
                         </ul>  
                     </div>
                     <div className="nav-user-dropdown">
