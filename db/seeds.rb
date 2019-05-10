@@ -8,7 +8,6 @@ require 'open-uri'
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# apex = Movie.create(title: "Tarzan", description: "", year: 1999, rating: "G", run_time: "1h 28m") 
 # apex.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/fletnix-seeds/apex.webp"), filename: "9")
 
 User.destroy_all
@@ -130,6 +129,11 @@ MovieGenre.create(movie_id: marys.id, genre_id: genre6.id)
 MovieGenre.create(movie_id: marys.id, genre_id: genre3.id)
 MovieGenre.create(movie_id: mulan.id, genre_id: genre6.id)
 MovieGenre.create(movie_id: mulan.id, genre_id: genre2.id)
+MovieGenre.create(movie_id: mulan.id, genre_id: genre4.id)
+MovieGenre.create(movie_id: incredibles2.id, genre_id: genre4.id)
+MovieGenre.create(movie_id: zombieland.id, genre_id: genre5.id)
+MovieGenre.create(movie_id: hercules.id, genre_id: genre4.id)
+MovieGenre.create(movie_id: blackfish.id, genre_id: genre5.id)
 
 
 

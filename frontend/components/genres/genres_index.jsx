@@ -35,7 +35,7 @@ class GenreIndex extends React.Component {
         let firstGenre = this.props.genres[this.props.genreId];
         if (!this.props.genreId){
             return (
-                <MainMovie movie={this.props.movies[1]} />
+                <MainMovie movie={this.props.mainMovie} />
             )
         } else {
             return(
