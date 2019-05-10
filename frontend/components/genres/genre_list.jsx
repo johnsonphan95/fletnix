@@ -53,7 +53,7 @@ class GenreList extends React.Component {
             return null
         }
     
-        let moviesLists = this.props.moviesList.slice(this.state.startIndex, this.state.endIndex).reverse().map(id => {
+        let moviesLists = this.props.moviesList.slice(this.state.startIndex, this.state.endIndex).map(id => {
             return(
                 <li className="genre-list-li" key={id}>
                     {/* <Link className="play-button" to={`/watch/${id}`}>
