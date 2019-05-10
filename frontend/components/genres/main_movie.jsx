@@ -6,7 +6,7 @@ class MainMovie extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            hover: false, 
+            hover: true, 
             muted: true
         }
         this.handleMouseEnter = this.handleMouseEnter.bind(this);
@@ -56,7 +56,7 @@ class MainMovie extends React.Component {
                 height="100%"
                  />
                 <div className="main-description-box">
-                    <h1 className="main-title"><strong>{this.props.movie.title}</strong></h1>
+                    <h1 className="main-title">{this.props.movie.title}</h1>
                     <Link className="main-play-button" to={`/watch/${this.props.movie.id}`}><i class="fas fa-play">&nbsp;&nbsp;Play</i></Link>
                     <p className="main-description">{this.props.movie.description}</p>
                 </div>

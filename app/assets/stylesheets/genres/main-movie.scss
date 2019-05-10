@@ -3,6 +3,23 @@
     font-weight: bold;
     font-size: 50px;
     margin-bottom: 30px;
+font-family: 'Open Sans', sans-serif;
+}
+
+.main-description-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    left: 4%;
+    top: 22%;
+}
+
+.main-description {
+    color: white;  
+    font-size: 18px;
+    width: 80%;
+    font-family: 'Duru Sans', sans-serif;
 }
 
 .main-vid {
@@ -14,14 +31,6 @@
     width: 100%;
 }
 
-.main-description-box {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 600px;
-    left: 4%;
-    top: 22%;
-}
 
 .main-index-splash {
     position: absolute;
@@ -41,18 +50,13 @@
     z-index: 0;
 }
 
-.main-description {
-    color: white;  
-    font-size: 22px;
-    width: 80%;
-}
 
 .mute-button {
     color: white; 
     position: absolute; 
     font-size: 35px;
     bottom: 25%; 
-    right: 155px;
+    right: 190px;
     padding: 5px 7px; 
     border-radius: 100%; 
     background-color: rgba($color: #141414, $alpha: 0.4);
