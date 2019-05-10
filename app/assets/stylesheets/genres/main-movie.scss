@@ -27,10 +27,13 @@ font-family: 'Open Sans', sans-serif;
     width: 100%;
 }
 
-.main-div > div {
-    width: 100%;
+.main-vid video {
+    object-fit: cover;
 }
 
+.main-div > video {
+    object-fit: 100%;
+}
 
 .main-index-splash {
     position: absolute;
