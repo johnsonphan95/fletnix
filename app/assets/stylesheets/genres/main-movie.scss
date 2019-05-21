@@ -39,20 +39,8 @@ font-family: 'Open Sans', sans-serif;
     position: absolute;
     width: 100%;
     height: 38%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(14, 14, 14, 1) 90%);
     background-size: cover;
 }
-
-.main-index-splash::after{
-    position: absolute;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(14, 14, 14, 1) 90%);
-    content: "";
-    width: 100%;
-    height: 200px;
-    z-index: 0;
-}
-
 
 .mute-button {
     color: white; 

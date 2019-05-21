@@ -6,7 +6,6 @@
 
 .genre-list-label {
     margin-bottom: 15px;
-    margin-top: 50px;
     margin-left: 3%;
 }
 
@@ -14,6 +13,7 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    margin-bottom: 4%;
 }
 
 .genre-list-li {
@@ -28,6 +28,8 @@
     border: 1px solid #141414;
     margin: 0 3%;
 }
+
+
 
 .genre-link {
     text-decoration: none; 

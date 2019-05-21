@@ -6,7 +6,7 @@ class MainMovie extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            hover: false, 
+            hover: true, 
             muted: true
         }
         this.handleMouseEnter = this.handleMouseEnter.bind(this);
