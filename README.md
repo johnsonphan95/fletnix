@@ -1,24 +1,12 @@
-# README
+# Fletnix
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://fletnix.herokuapp.com/#/
 
-Things you may want to cover:
+Fletnix is a video library website which is a clone of the popular Netflix. Made with React.js and Redux for the front end and Rails/PostgreSQL for the back end.
 
-* Ruby version
+## Features
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Front end and Back end User Authentication 
+* Dynamic Main Splash which updates with genres show pages 
+* Scrollable lists of movies for each genre displayed
+* Movies can be displayed along with player controls for a full user experience 
