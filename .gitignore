@@ -24,6 +24,8 @@ bundle.js*
 npm-debug.log
 /public/assets
 .byebug_history
+/fletnix_images
+/fletnix_videos
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
