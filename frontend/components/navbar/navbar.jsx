@@ -8,7 +8,7 @@ const NavBar = ({currentUser, logout, trendingId, recentId}) => {
                 return (
                     <div>
                         <nav className="signin-nav">
-                            <Link className="header-logo" to="/"><img src="https://fontmeme.com/permalink/190502/78603fb0480f9521f3a09ec1be1bbe6c.png" /></Link>
+                            <Link className="header-logo" to="/"><img src="fletnix-logo.png" /></Link>
                             <Link className="signin-link" to="/login">Sign In</Link>
                         </nav>
                     </div>
@@ -17,7 +17,7 @@ const NavBar = ({currentUser, logout, trendingId, recentId}) => {
                     return (
                         <div>
                             <nav className="logo-nav">
-                                <Link className="header-logo" to="/"><img src="https://fontmeme.com/permalink/190502/78603fb0480f9521f3a09ec1be1bbe6c.png" /></Link>
+                                <Link className="header-logo" to="/"><img src="fletnix-logo.png" /></Link>
                             </nav>
                         </div>
                 )
@@ -30,7 +30,7 @@ const NavBar = ({currentUser, logout, trendingId, recentId}) => {
             return(
                 <hgroup className="navbar-group">
                     <div className="nav-logo-container">
-                        <Link className="nav-logo" to="/"><img src="https://fontmeme.com/permalink/190505/e8cd730959225312daab78a2bc78e9a5.png" /></Link>
+                        <Link className="nav-logo" to="/"><img src="/fletnix-logo2.png" /></Link>
                     </div>
                     <div className="nav-button-container">
                         <ul className="nav-button-ul">
