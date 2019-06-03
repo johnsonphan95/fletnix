@@ -78,12 +78,13 @@ class GenreIndex extends React.Component {
             <div className="genres-index-background">
                 {/* <MainMovie movie={this.props.movies[1]}/> */}
                 {this.mainSplashMovie()}
-                <div className="genres-index-container">
+                
+                {/* <div className="genres-index-container"> */}
                     <ul className="genres-index-ul">     
                         {this.topGenre()} 
                         {genres}
                     </ul>
-                </div>
+                {/* </div> */}
             </div>
         )
     }

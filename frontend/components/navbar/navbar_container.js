@@ -4,13 +4,13 @@ import { withRouter } from 'react-router-dom'
 import NavBar from './navbar';
 import { trendingId, recentId } from '../helpers/navbar_selector';
 
-const mapStateToProps = ({entities, session}, ownProps) => {
-    
+const mapStateToProps = ({entities, session}, ownProps) => {    
     return({
         currentUser: entities.users[session.id], 
         genres: entities.genres, 
         trendingId: trendingId(entities.genres), 
-        recentId: recentId(entities.genres)
+        recentId: recentId(entities.genres), 
+        movies: Object.values(entities.movies)
     })
 }
 

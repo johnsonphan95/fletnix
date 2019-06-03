@@ -24,7 +24,7 @@
 
 .genre-list-li:hover {
     transition: all .4s ease-in-out;
-    transform: scale(1.4);
+    transform: scale(1.7);
     border: 1px solid #141414;
     margin: 0 3%;
 }

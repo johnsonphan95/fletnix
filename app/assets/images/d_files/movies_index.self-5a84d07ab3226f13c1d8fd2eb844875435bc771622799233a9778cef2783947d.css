@@ -1,0 +1,35 @@
+/* line 1, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/movies_index.scss */
+.movies-index-background {
+  background-color: #141414;
+  width: 100%;
+  height: 150vh;
+}
+
+/* line 7, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/movies_index.scss */
+.movies-index-container {
+  display: flex;
+  width: 100%;
+  /* flex-direction: row; */
+}
+
+/* line 13, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/movies_index.scss */
+.movies-index-ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 30px;
+  margin: auto;
+}
+
+/* line 23, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/movies_index.scss */
+.movie-item {
+  margin: 40px 2px;
+  width: 16%;
+}
+
+/* line 28, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/movies_index.scss */
+.movie-item-img {
+  width: 100%;
+}

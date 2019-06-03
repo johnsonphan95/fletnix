@@ -1,0 +1,32 @@
+/* line 1, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/movies/movies-show.scss */
+.movie-show-background {
+  background-color: black;
+}
+
+/* line 5, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/movies/movies-show.scss */
+.movie-show-container {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+/* line 11, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/movies/movies-show.scss */
+.movie-show-video {
+  height: 100%;
+  max-width: 100%;
+}
+
+/* line 16, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/movies/movies-show.scss */
+.back-button {
+  color: white;
+  position: absolute;
+  left: 3%;
+  top: 7%;
+  font-size: 40px;
+  z-index: 20;
+}
+
+/* line 25, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/movies/movies-show.scss */
+.back-button:hover {
+  transform: scale(1.2);
+}

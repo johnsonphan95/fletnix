@@ -7,6 +7,5 @@ import tagsReducer from './tags_reducer';
 export default combineReducers({
     users: usersReducer, 
     movies: moviesReducer, 
-    genres: genresReducer, 
-    tags: tagsReducer
+    genres: genresReducer
 })

@@ -1,0 +1,141 @@
+/* line 1, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/session_form.scss */
+.splash-background {
+  background-color: black;
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/0649986d-7b39-4efc-a160-9fa5f49090ce/4cd4126d-b657-4d9f-9ca6-8da32b554e79/US-en-20190429-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 800px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 18, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/session_form.scss */
+.splash-background:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* line 31, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/session_form.scss */
+.session-form-container {
+  position: absolute;
+  top: 10%;
+  background: rgba(7, 7, 7, 0.8);
+  border-radius: 5px;
+  color: white;
+  height: 650px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 44, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/session_form.scss */
+.session-form-outside {
+  position: relative;
+  color: black;
+  text-align: center;
+  padding-top: 20px;
+  width: 70%;
+}
+
+/* line 52, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/session_form.scss */
+.session-submit {
+  position: relative;
+  background-color: #E50914;
+  border: #E50914;
+  color: white;
+  height: 40px;
+  width: 100%;
+  margin-top: 50px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 65, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/session_form.scss */
+.session-demo-button {
+  position: relative;
+  background-color: #E50914;
+  border: #E50914;
+  color: white;
+  height: 40px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 78, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/session_form.scss */
+.session-form-title {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 35px;
+  margin-top: 15%;
+  float: left;
+}
+
+/* line 88, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/session_form.scss */
+.session-form-input {
+  position: relative;
+  background-color: #333333;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 20px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: lighter;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 25px;
+  border: 0;
+  color: white;
+}
+
+/* line 104, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/session_form.scss */
+.session-form-footer {
+  margin-top: 210px;
+  margin-right: 15%;
+}
+
+/* line 109, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/session_form.scss */
+.session-form-footer-label {
+  color: grey;
+  font-size: 18px;
+  position: absolute;
+  left: 15%;
+  bottom: 7%;
+}
+
+/* line 117, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/session_form.scss */
+.session-signup-link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+/* line 123, /Users/johnsonphan/Desktop/projects/fletnix/app/assets/stylesheets/api/session_form.scss */
+.session-form-errors {
+  position: relative;
+  color: #E87c03;
+  font-size: 12px;
+  font-weight: lighter;
+  float: left;
+}

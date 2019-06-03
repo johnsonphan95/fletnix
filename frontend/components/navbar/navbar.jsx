@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchBar from './search/search_bar';
 
 const NavBar = ({currentUser, logout, trendingId, recentId}) => {
 
@@ -24,8 +25,8 @@ const NavBar = ({currentUser, logout, trendingId, recentId}) => {
             }        
     };
 
-
     const navbar = () => {
+       
         if (!window.location.hash.includes("watch")){
             return(
                 <hgroup className="navbar-group">
@@ -38,6 +39,9 @@ const NavBar = ({currentUser, logout, trendingId, recentId}) => {
                             <li className="nav-button"><Link className="nav-button-link" to={`/browse/genres/${trendingId}`}>Trending Now</Link></li>
                             <li className="nav-button"><Link className="nav-button-link" to={`/browse/genres/${recentId}`}>Recently Added</Link></li>
                         </ul>  
+                    </div>
+                    <div className="search-bar">
+                        <SearchBar />
                     </div>
                     <div className="nav-user-dropdown">
                         <h2 className="current-user-profile">{currentUser.email}</h2>

@@ -12,3 +12,7 @@ export const fetchMovies = () => dispatch => (
     MoviesApiUtil.fetchMovies().then(movies => dispatch(receiveMovies(movies)))
 )
 
+export const findMovies = (query) => dispatch => (
+    MoviesApiUtil.findMovies(query).then(movies => dispatch(receiveMovies(movies)))
+)
+
