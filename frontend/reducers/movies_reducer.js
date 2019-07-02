@@ -1,5 +1,4 @@
 import { RECEIVE_MOVIES } from '../actions/movie_actions';
-import merge from 'lodash';
 
 const moviesReducer = (state ={}, action) => {
     Object.freeze(state);

@@ -1,6 +1,8 @@
-export const RECEIVE_SEARCH_ITEMS = "RECEIVE_SEARCH_ITEMS";
+export const RECEIVE_SEARCH_PHRASE = "RECEIVE_SEARCH_PHRASE";
 
-export const receiveSearchItems = (phrase) => ({
-    type: RECEIVE_SEARCH_ITEMS, 
+export const receiveSearchPhrase = (phrase) => ({
+    type: RECEIVE_SEARCH_PHRASE, 
     phrase
 })
+
+

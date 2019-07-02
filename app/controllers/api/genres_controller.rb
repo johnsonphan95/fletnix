@@ -8,4 +8,6 @@ class Api::GenresController < ApplicationController
         @genre = Genre.find(params[:id])
         render :show
     end 
+
+    
 end

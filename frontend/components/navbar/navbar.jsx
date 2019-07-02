@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SearchBar from './search/search_bar';
+import SearchBarContainer from './search/search_bar_container';
 
 const NavBar = ({currentUser, logout, trendingId, recentId}) => {
 
@@ -41,7 +41,7 @@ const NavBar = ({currentUser, logout, trendingId, recentId}) => {
                         </ul>  
                     </div>
                     <div className="search-bar">
-                        <SearchBar />
+                        <SearchBarContainer />
                     </div>
                     <div className="nav-user-dropdown">
                         <h2 className="current-user-profile">{currentUser.email}</h2>

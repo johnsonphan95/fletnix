@@ -6,30 +6,14 @@ class SearchBar extends React.Component {
         super(props);
         this.state = {
             phrase: ""
-            // movies: this.props.movies, 
-            // searchMovies: []
         }
         this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(e){
-        // let listMovies = [];
-        // e.preventDefault();
-    
-        // if (e.Target.value) {
-        //     listMovies = this.props.movies.filter(movie => movie.title.toLowerCase().includes(e.target.value.toLowerCase()))
-        // }
-
-        // this.setState({
-        //     searchMovies: listMovies
-        // })
-        
-        if (e.Target.value){
-            e.preventDefault(); 
-            this.setState({
-                phrase: e.Target.value
-            })
-        }
+        this.setState({phrase: e.target.value}, () => {
+            this.props.receiveSearchPhrase(this.state.phrase)
+        })
     }
 
     render(){

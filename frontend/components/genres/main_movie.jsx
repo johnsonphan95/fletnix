@@ -57,7 +57,8 @@ class MainMovie extends React.Component {
                  />
                 <div className="main-description-box">
                     <h1 className="main-title">{this.props.movie.title}</h1>
-                    <Link className="main-play-button" to={`/watch/${this.props.movie.id}`}><i class="fas fa-play">&nbsp;&nbsp;Play</i></Link>
+                    <Link className="main-play-button" to={`/watch/${this.props.movie.id}`}><i class="fas fa-play"></i> Play</Link>
+                    <h2 className="watch-now">Watch Now</h2>
                     <p className="main-description">{this.props.movie.description}</p>
                 </div>
                 <div className="main-rating">{this.props.movie.rating}</div>
