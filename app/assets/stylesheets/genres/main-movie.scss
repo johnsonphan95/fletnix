@@ -52,21 +52,25 @@
 .mute-button {
     color: white; 
     position: absolute; 
-    font-size: 35px;
+    font-size: 22px;
+    height: 26px;
     bottom: 25%; 
-    right: 190px;
+    right: 160px;
     padding: 5px 7px; 
     border-radius: 100%; 
+    border: solid white 2px;
     background-color: rgba($color: #141414, $alpha: 0.4);
+    display: flex;
+    align-items: center;
 }
 
 .main-rating {
     position: absolute;
     color: white; 
+    border-left: solid white 3px;
     background-color: rgba($color: #141414, $alpha: 0.4);
-    border-radius: 2px;
-    font-size: 25px;
-    padding: 10px 100px 10px 30px;
+    font-size: 18px;
+    padding: 10px 60px 10px 30px;
     bottom: 25%;
     right: 0;
 }

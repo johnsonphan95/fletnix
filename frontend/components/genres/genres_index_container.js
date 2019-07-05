@@ -11,7 +11,8 @@ const mapStateToProps = ({entities}, ownProps) => {
         genres: entities.genres, 
         movies: entities.movies, 
         genreId: ownProps.match.params.genreId, 
-        mainMovie: mainMovie(entities.movies)
+        mainMovie: mainMovie(entities.movies), 
+        phrase: entities.search.phrase
     })
 }
 

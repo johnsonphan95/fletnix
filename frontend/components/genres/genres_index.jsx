@@ -1,6 +1,7 @@
 import React from 'react';
 import GenreListContainer from './genre_list_container';
 import MainMovie from './main_movie';
+import SearchResult from './search_result';
 
 class GenreIndex extends React.Component {
     constructor(props){
@@ -33,14 +34,16 @@ class GenreIndex extends React.Component {
 
     mainSplashMovie(){
         let firstGenre = this.props.genres[this.props.genreId];
-        if (!this.props.genreId){
-            return (
-                <MainMovie movie={this.props.mainMovie} />
-            )
-        } else {
-            return(
-                <MainMovie movie={this.props.movies[firstGenre.movies[0]]} />
-            )
+        if (this.props.phrase === "") {
+            if (!this.props.genreId){
+                return (
+                    <MainMovie movie={this.props.mainMovie} />
+                )
+            } else {
+                return(
+                    <MainMovie movie={this.props.movies[firstGenre.movies[0]]} />
+                )
+            }
         }
     }
 
@@ -76,15 +79,11 @@ class GenreIndex extends React.Component {
         
         return( 
             <div className="genres-index-background">
-                {/* <MainMovie movie={this.props.movies[1]}/> */}
                 {this.mainSplashMovie()}
-                
-                {/* <div className="genres-index-container"> */}
                     <ul className="genres-index-ul">     
                         {this.topGenre()} 
                         {genres}
                     </ul>
-                {/* </div> */}
             </div>
         )
     }

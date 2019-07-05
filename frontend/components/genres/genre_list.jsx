@@ -56,16 +56,7 @@ class GenreList extends React.Component {
         let moviesLists = this.props.moviesList.slice(this.state.startIndex, this.state.endIndex).map(id => {
             return(
                 <li className="genre-list-li" key={id}>
-                    {/* <Link className="play-button" to={`/watch/${id}`}>
-                        <Player 
-                            poster={this.props.movies[id].photoUrl}
-                            src={this.props.movies[id].videoUrl}
-                            autoPlay={false}
-                            muted={true}
-                        />
-                    </Link> */}
                     <Link className="play-button" to={`/watch/${id}`}><img width="100%" src={this.props.movies[id].photoUrl} /></Link>
-                    
                 </li>
             )
         })
