@@ -9,7 +9,7 @@ class SearchResult extends React.Component {
     render(){
         return (
             <div>
-
+                test test 
             </div>
         )
     }
