@@ -46,8 +46,8 @@ const NavBar = ({currentUser, logout, trendingId, recentId}) => {
                     <div className="nav-user-dropdown">
                         <img className="user-avatar" src="https://occ-0-2219-2218.1.nflxso.net/art/48870/a79eb5114719dad46b1e942231e6a4b030248870.png" alt=""/>
                         <div className="dropdown">
-                            <a className="current-user-profile" id="dropdown-item">{currentUser.email}</a>
-                            <a className="nav-logout" id="dropdown-item" onClick={logout}>Sign out of Fletnix</a>
+                            <a className="current-user-profile" >{currentUser.email}</a>
+                            <a className="nav-logout" onClick={logout}> Sign out of Fletnix </a>
                         </div>
                     </div>
                 </hgroup>

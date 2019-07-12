@@ -76,15 +76,21 @@
     display: inline-block;
 }
 
-.search-bar-input{
+.search-bar-wrapper {
+    background: black;
     position: absolute;
     right: 190px;
-    top: 30px;  
-    background: black;
+    top: 22px; 
     border: 1px solid white;
+    padding: 5px;
+}
+
+.search-bar-input{
+    border: none;
+    position: relative;
+    background: black;    
     font-size: 14px;
     color: white;
-    padding: 3px;
 }
 
 .user-avatar{
@@ -99,11 +105,16 @@
     right: 0px;
     display: none;
     font-size: 14px;
+    top: 40px;
 }
 
-.dropdown a{
+.dropdown a {
     padding: 10px;
     display: block;
+}
+
+.nav-logout:hover {
+    cursor: pointer;
 }
 
 .nav-user-dropdown:hover .dropdown { display: block }
