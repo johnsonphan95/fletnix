@@ -44,8 +44,11 @@ const NavBar = ({currentUser, logout, trendingId, recentId}) => {
                         <SearchBarContainer />
                     </div>
                     <div className="nav-user-dropdown">
-                        <h2 className="current-user-profile">{currentUser.email}</h2>
-                        <button className="nav-logout" onClick={logout}>Log Out</button>
+                        <img className="user-avatar" src="https://occ-0-2219-2218.1.nflxso.net/art/48870/a79eb5114719dad46b1e942231e6a4b030248870.png" alt=""/>
+                        <div className="dropdown">
+                            <a className="current-user-profile" id="dropdown-item">{currentUser.email}</a>
+                            <a className="nav-logout" id="dropdown-item" onClick={logout}>Sign out of Fletnix</a>
+                        </div>
                     </div>
                 </hgroup>
             )

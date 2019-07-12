@@ -71,6 +71,43 @@
 .nav-user-dropdown {
     color: lightgrey;
     position: absolute;
-    right: 3%;
+    right: 50px;
+    height: 40px;
+    display: inline-block;
 }
 
+.search-bar-input{
+    position: absolute;
+    right: 190px;
+    top: 30px;  
+    background: black;
+    border: 1px solid white;
+    font-size: 14px;
+    color: white;
+    padding: 3px;
+}
+
+.user-avatar{
+    height: 40px;
+    width: 40px;    
+}
+
+.dropdown{
+    position: absolute;
+    background-color: black; 
+    z-index: 1;
+    right: 0px;
+    display: none;
+    font-size: 14px;
+}
+
+.dropdown a{
+    padding: 10px;
+    display: block;
+}
+
+.nav-user-dropdown:hover .dropdown { display: block }
+
+.dropdown a {
+    background: #141414;
+}
