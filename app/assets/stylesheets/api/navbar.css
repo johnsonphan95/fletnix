@@ -100,7 +100,6 @@
 
 .dropdown{
     position: absolute;
-    background-color: black; 
     z-index: 1;
     right: 0px;
     display: none;
@@ -111,14 +110,12 @@
 .dropdown a {
     padding: 10px;
     display: block;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .nav-logout:hover {
     cursor: pointer;
+    text-decoration: underline;
 }
 
 .nav-user-dropdown:hover .dropdown { display: block }
-
-.dropdown a {
-    background: #141414;
-}

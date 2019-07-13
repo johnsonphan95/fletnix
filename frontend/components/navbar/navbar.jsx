@@ -35,7 +35,7 @@ const NavBar = ({currentUser, logout, trendingId, recentId}) => {
                     </div>
                     <div className="nav-button-container">
                         <ul className="nav-button-ul">
-                            <li className="nav-button"><Link className="nav-button-link" to="/">Home</Link></li>
+                            <li className="nav-button"><Link className="nav-button-link" to="/browse">Home</Link></li>
                             <li className="nav-button"><Link className="nav-button-link" to={`/browse/genres/${trendingId}`}>Trending Now</Link></li>
                             <li className="nav-button"><Link className="nav-button-link" to={`/browse/genres/${recentId}`}>Recently Added</Link></li>
                         </ul>  
