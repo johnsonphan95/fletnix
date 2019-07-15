@@ -67,7 +67,6 @@ class GenreIndex extends React.Component {
         } else {
             genres = Object.values(this.props.genres).map(genre => {
                 if (genre.id !== parseInt(this.props.genreId)) { 
-                    
                     return (
                         <li className="genres-index-li" key={genre.id}>
                             <GenreListContainer moviesList={genre.movies} genre={genre} />
