@@ -73,7 +73,6 @@ class GenreIndex extends React.Component {
     }
 
     render(){
-        // let genres = this.genres();
 
         if (Object.values(this.props.genres).length === 0){
             return null
@@ -81,26 +80,6 @@ class GenreIndex extends React.Component {
         if (Object.values(this.props.movies).length === 0){
             return null
         }
-
-        // if (!this.props.genreId){
-        //     genres = Object.values(this.props.genres).map(genre => {           
-        //         return (
-        //             <li className="genres-index-li" key={genre.id}>
-        //                 <GenreListContainer moviesList={genre.movies} genre={genre} />
-        //             </li>
-        //         )
-        //     })
-        // } else {
-        //     genres = Object.values(this.props.genres).map(genre => {
-        //         if (genre.id !== parseInt(this.props.genreId)) { 
-        //             return (
-        //                 <li className="genres-index-li" key={genre.id}>
-        //                     <GenreListContainer moviesList={genre.movies} genre={genre} />
-        //                 </li>
-        //             )
-        //         }
-        //     }) 
-        // }
 
         return( 
             <div className="genres-index-background">
