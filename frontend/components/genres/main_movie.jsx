@@ -20,7 +20,10 @@ class MainMovie extends React.Component {
     }
 
     handleMouseLeave(e){
-        this.setState({hover:false})
+        const hover = () => {
+            this.setState({hover: false})
+        }
+        setTimeout(hover, 2500 )
     }
 
     handleMute(e){

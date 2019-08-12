@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     resources :movies, only: [:index, :show] do 
       get :search, on: :collection
     end 
-    resources :genres, only: [:index, :show]
+    resources :genres, only: [:index, :show] do 
+      get :search, on: :collection
+    end 
     resources :tags, only: [:index, :show]
   end
 

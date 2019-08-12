@@ -8,6 +8,7 @@ class GenreIndex extends React.Component {
         super(props);
         this.topGenre = this.topGenre.bind(this);
         this.mainSplashMovie = this.mainSplashMovie.bind(this);
+        this.genres = this.genres.bind(this);
     }
 
     componentDidMount(){
@@ -22,13 +23,37 @@ class GenreIndex extends React.Component {
     }
 
     topGenre(){
-        let top = this.props.genres[this.props.genreId]
-        if (this.props.genreId){
-            return(
-                <div>
-                    <GenreListContainer moviesList={top.movies} genre={top} />
-                </div>
-            )
+        let top = this.props.genres[this.props.genreId];
+        if (this.props.phrase === ""){
+            if (this.props.genreId){
+                return(
+                    <div>
+                        <GenreListContainer moviesList={top.movies} genre={top} />
+                    </div>
+                )
+            }
+        }
+    }
+
+    genres(){
+        if (!this.props.genreId) {
+            return Object.values(this.props.genres).map(genre => {
+                return (
+                    <li className="genres-index-li" key={genre.id}>
+                        <GenreListContainer moviesList={genre.movies} genre={genre} />
+                    </li>
+                )
+            })
+        } else {
+            return Object.values(this.props.genres).map(genre => {
+                if (genre.id !== parseInt(this.props.genreId)) {
+                    return (
+                        <li className="genres-index-li" key={genre.id}>
+                            <GenreListContainer moviesList={genre.movies} genre={genre} />
+                        </li>
+                    )
+                }
+            })
         }
     }
 
@@ -48,40 +73,41 @@ class GenreIndex extends React.Component {
     }
 
     render(){
-        let genres;
+        // let genres = this.genres();
 
         if (Object.values(this.props.genres).length === 0){
             return null
-        } else if (Object.values(this.props.movies).length === 0){
+        } 
+        if (Object.values(this.props.movies).length === 0){
             return null
         }
 
-        if (!this.props.genreId){
-            genres = Object.values(this.props.genres).map(genre => {           
-                return (
-                    <li className="genres-index-li" key={genre.id}>
-                        <GenreListContainer moviesList={genre.movies} genre={genre} />
-                    </li>
-                )
-            })
-        } else {
-            genres = Object.values(this.props.genres).map(genre => {
-                if (genre.id !== parseInt(this.props.genreId)) { 
-                    return (
-                        <li className="genres-index-li" key={genre.id}>
-                            <GenreListContainer moviesList={genre.movies} genre={genre} />
-                        </li>
-                    )
-                }
-            }) 
-        }
-        
+        // if (!this.props.genreId){
+        //     genres = Object.values(this.props.genres).map(genre => {           
+        //         return (
+        //             <li className="genres-index-li" key={genre.id}>
+        //                 <GenreListContainer moviesList={genre.movies} genre={genre} />
+        //             </li>
+        //         )
+        //     })
+        // } else {
+        //     genres = Object.values(this.props.genres).map(genre => {
+        //         if (genre.id !== parseInt(this.props.genreId)) { 
+        //             return (
+        //                 <li className="genres-index-li" key={genre.id}>
+        //                     <GenreListContainer moviesList={genre.movies} genre={genre} />
+        //                 </li>
+        //             )
+        //         }
+        //     }) 
+        // }
+
         return( 
             <div className="genres-index-background">
                 {this.mainSplashMovie()}
                     <ul className="genres-index-ul">     
                         {this.topGenre()} 
-                        {genres}
+                        {this.genres()}
                     </ul>
             </div>
         )
