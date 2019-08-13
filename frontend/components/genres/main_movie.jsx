@@ -7,7 +7,8 @@ class MainMovie extends React.Component {
         super(props);
         this.state = {
             hover: true, 
-            muted: true
+            muted: true, 
+            delay: false
         }
         this.handleMouseEnter = this.handleMouseEnter.bind(this);
         this.handleMouseLeave = this.handleMouseLeave.bind(this);
@@ -17,13 +18,22 @@ class MainMovie extends React.Component {
 
     handleMouseEnter(e){
         this.setState({ hover: true })
+        if (this.state.hover === false){
+            this.setState({hover: true})
+        }
     }
 
     handleMouseLeave(e){
         const hover = () => {
-            this.setState({hover: false})
+            this.setState({
+                hover: false, 
+                delay: false
+            })
         }
-        setTimeout(hover, 2500 )
+        if (this.state.delay === false){
+            this.setState({delay: true})
+            setTimeout(hover, 1500)
+        }
     }
 
     handleMute(e){
@@ -49,7 +59,7 @@ class MainMovie extends React.Component {
     render(){
         
         return (
-            <div className="main-index-splash" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}> 
+            <div className="main-index-splash" onMouseOver={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}> 
                 <ReactPlayer
                 className="main-vid" 
                 playing={this.state.hover}

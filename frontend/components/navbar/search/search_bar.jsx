@@ -24,7 +24,7 @@ class SearchBar extends React.Component {
                     className="search-bar-input"
                     value={this.state.phrase}
                     onChange={this.handleChange}
-                    placeholder=" Titles, people, genres"
+                    placeholder=" Titles, genres..."
                 />
             </div>
         )

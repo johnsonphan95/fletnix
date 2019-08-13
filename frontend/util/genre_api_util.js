@@ -11,3 +11,10 @@ export const fetchGenre = (id) => (
         url: `api/genres/${id}`
     })
 )
+
+export const findGenres = (query) => {
+    $.ajax({
+        method: "GET",
+        url: `api/genres/search/?query=${query}`
+    })
+}

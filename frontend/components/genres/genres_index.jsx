@@ -1,7 +1,7 @@
 import React from 'react';
 import GenreListContainer from './genre_list_container';
 import MainMovie from './main_movie';
-import SearchResult from './search_result';
+import SearchResultContainer from './search_result_container';
 
 class GenreIndex extends React.Component {
     constructor(props){
@@ -17,10 +17,8 @@ class GenreIndex extends React.Component {
         this.props.fetchGenres();
     }
 
-    componentDidUpdate(prevProps){
-        if (this.props.genreId && this.props.genreId !== prevProps.genreId) {
-            window.scrollTo(0,0)
-        }
+    componentWillUpdate(){
+        window.scrollTo(0, 0);
     }
 
     displayPage(){
@@ -34,7 +32,7 @@ class GenreIndex extends React.Component {
             </div>)
         } else {
             return (
-                <p>hello</p> 
+                <SearchResultContainer /> 
             )
         }
     }

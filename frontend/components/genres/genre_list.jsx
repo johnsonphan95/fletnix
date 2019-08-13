@@ -16,13 +16,13 @@ class GenreList extends React.Component {
         this.shiftRight = this.shiftRight.bind(this);
     }
 
-    // ref ={(p) => {
-    //     thisplayer = p;
-    // }}
-
     componentDidMount(){
         this.props.fetchMovies();
     }
+
+    // componentWillUpdate(){
+    //     window.scrollTo(0, 0)
+    // }
 
     shiftLeft(e){
         e.preventDefault(); 

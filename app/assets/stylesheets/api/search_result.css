@@ -1,0 +1,13 @@
+.search-result-container {
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.search-movie-li {
+    width: 16%;
+    margin: 0px 2px;
+}

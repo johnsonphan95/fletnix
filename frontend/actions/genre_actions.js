@@ -20,3 +20,7 @@ export const fetchGenres = () => dispatch => (
 export const fetchGenre = (id) => dispatch => (
     GenreApiUtil.fetchGenre(id).then(genre => dispatch(receiveGenre(genre)))
 )
+
+export const findGenres = (query) => dispatch => (
+    GenreApiUtil.findGenres(query).then(Genres => dispatch(receiveGenres(movies)))
+)
