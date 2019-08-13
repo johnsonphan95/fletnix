@@ -9,6 +9,7 @@ class GenreIndex extends React.Component {
         this.topGenre = this.topGenre.bind(this);
         this.mainSplashMovie = this.mainSplashMovie.bind(this);
         this.genres = this.genres.bind(this);
+        this.displayPage = this.displayPage.bind(this);
     }
 
     componentDidMount(){
@@ -19,6 +20,22 @@ class GenreIndex extends React.Component {
     componentDidUpdate(prevProps){
         if (this.props.genreId && this.props.genreId !== prevProps.genreId) {
             window.scrollTo(0,0)
+        }
+    }
+
+    displayPage(){
+        if (this.props.phrase === ""){
+            return (<div className="genres-index-wrapper">
+                { this.mainSplashMovie() }
+                <ul className="genres-index-ul">
+                    {this.topGenre()}
+                    {this.genres()}
+                </ul>
+            </div>)
+        } else {
+            return (
+                <p>hello</p> 
+            )
         }
     }
 
@@ -36,24 +53,26 @@ class GenreIndex extends React.Component {
     }
 
     genres(){
-        if (!this.props.genreId) {
-            return Object.values(this.props.genres).map(genre => {
-                return (
-                    <li className="genres-index-li" key={genre.id}>
-                        <GenreListContainer moviesList={genre.movies} genre={genre} />
-                    </li>
-                )
-            })
-        } else {
-            return Object.values(this.props.genres).map(genre => {
-                if (genre.id !== parseInt(this.props.genreId)) {
+        if (this.props.phrase === ""){
+            if (!this.props.genreId) {
+                return Object.values(this.props.genres).map(genre => {
                     return (
                         <li className="genres-index-li" key={genre.id}>
                             <GenreListContainer moviesList={genre.movies} genre={genre} />
                         </li>
                     )
-                }
-            })
+                })
+            } else {
+                return Object.values(this.props.genres).map(genre => {
+                    if (genre.id !== parseInt(this.props.genreId)) {
+                        return (
+                            <li className="genres-index-li" key={genre.id}>
+                                <GenreListContainer moviesList={genre.movies} genre={genre} />
+                            </li>
+                        )
+                    }
+                })
+            }
         }
     }
 
@@ -73,21 +92,13 @@ class GenreIndex extends React.Component {
     }
 
     render(){
-
-        if (Object.values(this.props.genres).length === 0){
+        if (Object.values(this.props.genres).length === 0 || Object.values(this.props.movies).length === 0){
             return null
         } 
-        if (Object.values(this.props.movies).length === 0){
-            return null
-        }
 
         return( 
             <div className="genres-index-background">
-                {this.mainSplashMovie()}
-                    <ul className="genres-index-ul">     
-                        {this.topGenre()} 
-                        {this.genres()}
-                    </ul>
+                    {this.displayPage()}
             </div>
         )
     }
