@@ -22,7 +22,6 @@ class SearchResult extends React.Component {
         genres = genres.filter(genre => genre.genre.toLowerCase().includes(query.toLowerCase()))
         .forEach(genre => genre.movies.forEach(id => results.add(id)));
         console.log(results)
-        // console.log(genres)
         results = Array.from(results);
         console.log(results)
         return results.map(id => {

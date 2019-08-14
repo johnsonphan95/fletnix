@@ -17,7 +17,7 @@ class GenreList extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchMovies();
+        // this.props.fetchMovies();
     }
 
     // componentWillUpdate(){
