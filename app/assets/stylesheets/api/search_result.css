@@ -5,7 +5,9 @@
     flex-wrap: wrap;
     margin: 0 auto;
     width: 90%;
+    list-style-type: none;
 }
+
 
 .search-movie-li {
     width: 16%;
