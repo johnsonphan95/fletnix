@@ -56,7 +56,8 @@
 #arrow-button {
     display: flex;
     position: absolute;
-    font-size: 30px;
+    font-size: 40px;
+    transform: scaleY(1.5);
     z-index: 1;
     height: 100%;
     width: 4%;

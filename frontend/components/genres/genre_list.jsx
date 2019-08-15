@@ -145,9 +145,9 @@ class GenreList extends React.Component {
                     
                     <div className="genre-list" onMouseEnter={this.handleListMouseEnter} onMouseLeave={this.handleListMouseLeave}>
 
-                        <div onClick={this.shiftLeft} onMouseOver={this.handleArrowMouseOver} onMouseLeave={this.handleArrowMouseLeave} className="arrow-button-left" id="arrow-button" style={this.state.arrowStyle}> <i className="fas fa-angle-left"></i> </div>
+                        <div onClick={this.shiftLeft} onMouseOver={this.handleArrowMouseOver} onMouseLeave={this.handleArrowMouseLeave} className="arrow-button-left" id="arrow-button" style={this.state.arrowStyle}> <i className="fas fa-chevron-left"></i> </div>
 
-                        <div onClick={this.shiftRight} onMouseOver={this.handleArrowMouseOver} onMouseLeave={this.handleArrowMouseLeave} className="arrow-button-right" id="arrow-button" style={this.state.arrowStyle}> <i className="fas fa-angle-right"></i></div>
+                        <div onClick={this.shiftRight} onMouseOver={this.handleArrowMouseOver} onMouseLeave={this.handleArrowMouseLeave} className="arrow-button-right" id="arrow-button" style={this.state.arrowStyle}> <i className="fas fa-chevron-right"></i></div>
 
                         <ul className="genre-list-ul" style={listStyle}>
                             {moviesLists}
