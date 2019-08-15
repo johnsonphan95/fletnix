@@ -7,13 +7,11 @@ class GenreList extends React.Component {
     constructor(props){
         super(props);
         this.state = { 
-            startIndex: 0, 
-            endIndex: 6,
-            showLeft: false, 
-            showRight: false, 
-            listHover: false, 
-            count: 0,
-            arrowStyle: {}
+            // startIndex: 0, 
+            // endIndex: 6,
+            windowWidth: 0,
+            arrowStyle: {}, 
+            listStyle: {}
         }
         this.shiftLeft = this.shiftLeft.bind(this);
         this.shiftRight = this.shiftRight.bind(this);
@@ -25,6 +23,7 @@ class GenreList extends React.Component {
 
     componentDidMount(){
         // this.props.fetchMovies();
+        this.setState({windowWidth: window.innerWidth})
     }
 
     // componentWillUpdate(){
@@ -40,6 +39,14 @@ class GenreList extends React.Component {
         //     })
             
         // }
+            this.setState({count: this.state.count -= 1});
+            this.setState({
+                listStyle: {
+                    transform: `translateX(${this.state.count * 15.7}vw)`,
+                    transition: `transform 500ms ease 0s`
+                }
+            })
+    
     }
 
     shiftRight(e){
@@ -51,6 +58,15 @@ class GenreList extends React.Component {
         //         endIndex: (this.state.endIndex + 1)
         //     })
         // }
+       
+        this.setState({ count: this.state.count += 1 });
+        this.setState({
+            listStyle: {
+                transform: `translateX(${this.state.count * 15.7}vw)`,
+                transition: `transform 500ms ease 0s`
+            }
+        })
+        
     }
 
     handleListMouseEnter(){
@@ -75,7 +91,7 @@ class GenreList extends React.Component {
         this.setState({
             arrowStyle: {
                 background: `rgba(14, 14, 14, 0.6)`,
-                color: `white` 
+                color: `white`
             }
         })
     }
@@ -84,18 +100,22 @@ class GenreList extends React.Component {
         this.setState({
             arrowStyle: {
                 background: `rgba(14, 14, 14, 0.4)`,
-                color: `white`
+                color: `grey`
             }
         })
     }
 
     render(){
-        if (Object.values(this.props.movies).length === 0){
-            return null
-        } else if (this.props.moviesList === undefined){
+
+        if (this.props.moviesList === undefined){
             return null
         }
-    
+        
+        // let listStyle = {
+        //     transform: `translateX(${this.state.count })`, 
+        //     transition: `transform 500ms ease 0s`
+        // }
+        
         // let moviesLists = this.props.moviesList.slice(this.state.startIndex, this.state.endIndex).map(id => {
         //     return(
         //         <li className="genre-list-li" key={id}>
@@ -105,7 +125,7 @@ class GenreList extends React.Component {
         // })
         let moviesLists = this.props.moviesList.map(id => {
             return(
-                <li className="genre-list-li" key={id}>
+                <li className="genre-list-li" key={id} >
                     <Link className="play-tile-button" to={`/watch/${id}`}><img src={this.props.movies[id].photoUrl} /></Link>
                 </li>
             )
@@ -118,11 +138,11 @@ class GenreList extends React.Component {
                     
                     <div className="genre-list" onMouseEnter={this.handleListMouseEnter} onMouseLeave={this.handleListMouseLeave}>
 
-                        <div onClick={this.shiftLeft} onMouseOver={this.handleArrowMouseOver} onMouseLeave=    {this.handleArrowMouseLeave} className="arrow-button-left" id="arrow-button" style={this.state.arrowStyle}> <i className="fas fa-angle-left"></i> </div>
+                        <div onClick={this.shiftLeft} onMouseOver={this.handleArrowMouseOver} onMouseLeave={this.handleArrowMouseLeave} className="arrow-button-left" id="arrow-button" style={this.state.arrowStyle}> <i className="fas fa-angle-left"></i> </div>
 
                         <div onClick={this.shiftRight} onMouseOver={this.handleArrowMouseOver} onMouseLeave={this.handleArrowMouseLeave} className="arrow-button-right" id="arrow-button" style={this.state.arrowStyle}> <i className="fas fa-angle-right"></i></div>
 
-                        <ul className="genre-list-ul">
+                        <ul className="genre-list-ul" style={this.state.listStyle}>
                             {moviesLists}
                         </ul>
 

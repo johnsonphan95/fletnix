@@ -1,12 +1,13 @@
 .genre-list {
     position: relative;
     transform: translateX(0);
+    display: block;
 }
 
 .genre-list-label {
     position: relative;
     margin-bottom: 15px;
-    left: 50px;
+    left: 4%;
     font-size: 1.4vw;
     font-weight: 525; 
 }
@@ -17,22 +18,21 @@
     flex-wrap: nowrap;
     align-items: center;
     margin-bottom: 4%;
-    width: 100%;
-    left: 50px;
+    width: 92%;
+    left: 4%;
 }
 
 .genre-list-li {
-    margin: 0px 2px;
+    /* margin: 0px 2px; */
     height: 100%;
-    width: 16.7%;
     transition: all .3s ease-in-out;
 }
 
 .genre-list-li:hover {
     transition: all .3s ease-in-out;
-    transform: scale(1.5);
-    border: 1px solid #141414;
-    margin: 0px 25px;
+    transform: scale(1.55);
+    /* border: 1px solid #141414; */
+    /* margin: 0px 25px; */
 }
 
 .genre-link {
@@ -41,6 +41,7 @@
 }
 
 .genre-list-wrapper {
+    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -58,7 +59,7 @@
     font-size: 30px;
     z-index: 1;
     height: 100%;
-    width: 50px;
+    width: 4%;
     color: transparent;
 }
 
@@ -71,7 +72,7 @@
 }
 
 .play-tile-button img{
-    width: 15.6vw;
+    width: 15.333vw;
 }
 
 
