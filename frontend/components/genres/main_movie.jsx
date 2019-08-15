@@ -32,7 +32,7 @@ class MainMovie extends React.Component {
         }
         if (this.state.delay === false){
             this.setState({delay: true})
-            setTimeout(hover, 1500)
+            setTimeout(hover, 5000)
         }
     }
 

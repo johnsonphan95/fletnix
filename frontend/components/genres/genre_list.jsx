@@ -75,7 +75,7 @@ class GenreList extends React.Component {
         this.setState({
             arrowStyle: {
                 background: `rgba(14, 14, 14, 0.6)`,
-                color: `white`
+                color: `white` 
             }
         })
     }
