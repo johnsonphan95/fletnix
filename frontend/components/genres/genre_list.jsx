@@ -24,7 +24,7 @@ class GenreList extends React.Component {
 
     componentDidMount(){
         // this.props.fetchMovies();
-        this.setState({slideWidth: window.innerWidth/6}), 
+        this.setState({slideWidth: (window.innerWidth * 0.92)/6}), 
         this.setState({length: this.props.moviesList.length})
     }
 
@@ -43,8 +43,8 @@ class GenreList extends React.Component {
         // }
         let curPos = this.state.currPosition;
         let slide = this.state.slideWidth;
-        let length = this.state.length;
-        console.log(curPos);
+        // let length = this.state.length;
+        console.log(slide);
         if (curPos < 0) {
             this.setState({
                 currPosition: curPos + slide
@@ -65,15 +65,15 @@ class GenreList extends React.Component {
         let length = this.state.length;
         let curPos = this.state.currPosition; 
         let slide = this.state.slideWidth; 
-        let endPos = slide * (length - 7);
-        console.log(length)
+        let endPos = slide * (length - 6);
+        console.log(slide);
         console.log(endPos)
-        console.log(curPos);
-        if (curPos >= -(endPos)){
+        if (curPos >= -(endPos - 1)){
             this.setState({
                 currPosition: curPos - slide
             })
         }
+        console.log(curPos);
     }
 
     handleListMouseEnter(){
