@@ -9,9 +9,10 @@ class GenreList extends React.Component {
         this.state = { 
             // startIndex: 0, 
             // endIndex: 6,
-            windowWidth: 0,
+            count: 0,
+            currPosition: 0,
+            slideWidth: 0,
             arrowStyle: {}, 
-            listStyle: {}
         }
         this.shiftLeft = this.shiftLeft.bind(this);
         this.shiftRight = this.shiftRight.bind(this);
@@ -23,7 +24,8 @@ class GenreList extends React.Component {
 
     componentDidMount(){
         // this.props.fetchMovies();
-        this.setState({windowWidth: window.innerWidth})
+        this.setState({slideWidth: window.innerWidth/6}), 
+        this.setState({length: this.props.moviesList.length})
     }
 
     // componentWillUpdate(){
@@ -39,13 +41,15 @@ class GenreList extends React.Component {
         //     })
             
         // }
-            this.setState({count: this.state.count -= 1});
+        let curPos = this.state.currPosition;
+        let slide = this.state.slideWidth;
+        let length = this.state.length;
+        console.log(curPos);
+        if (curPos < 0) {
             this.setState({
-                listStyle: {
-                    transform: `translateX(${this.state.count * 15.7}vw)`,
-                    transition: `transform 500ms ease 0s`
-                }
+                currPosition: curPos + slide
             })
+        }
     
     }
 
@@ -58,15 +62,18 @@ class GenreList extends React.Component {
         //         endIndex: (this.state.endIndex + 1)
         //     })
         // }
-       
-        this.setState({ count: this.state.count += 1 });
-        this.setState({
-            listStyle: {
-                transform: `translateX(${this.state.count * 15.7}vw)`,
-                transition: `transform 500ms ease 0s`
-            }
-        })
-        
+        let length = this.state.length;
+        let curPos = this.state.currPosition; 
+        let slide = this.state.slideWidth; 
+        let endPos = slide * (length - 7);
+        console.log(length)
+        console.log(endPos)
+        console.log(curPos);
+        if (curPos >= -(endPos)){
+            this.setState({
+                currPosition: curPos - slide
+            })
+        }
     }
 
     handleListMouseEnter(){
@@ -110,11 +117,11 @@ class GenreList extends React.Component {
         if (this.props.moviesList === undefined){
             return null
         }
-        
-        // let listStyle = {
-        //     transform: `translateX(${this.state.count })`, 
-        //     transition: `transform 500ms ease 0s`
-        // }
+
+        let listStyle = {
+            transform: `translateX(${this.state.currPosition}px)`, 
+            transition: `transform 500ms ease 0s`
+        }
         
         // let moviesLists = this.props.moviesList.slice(this.state.startIndex, this.state.endIndex).map(id => {
         //     return(
@@ -142,7 +149,7 @@ class GenreList extends React.Component {
 
                         <div onClick={this.shiftRight} onMouseOver={this.handleArrowMouseOver} onMouseLeave={this.handleArrowMouseLeave} className="arrow-button-right" id="arrow-button" style={this.state.arrowStyle}> <i className="fas fa-angle-right"></i></div>
 
-                        <ul className="genre-list-ul" style={this.state.listStyle}>
+                        <ul className="genre-list-ul" style={listStyle}>
                             {moviesLists}
                         </ul>
 
