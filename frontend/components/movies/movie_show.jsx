@@ -15,7 +15,7 @@ class MovieShow extends React.Component {
 
         return(
         <div className="movie-show-background">
-            <Link className="back-button" to="/browse"><i class="fas fa-arrow-left"></i></Link>
+            <Link className="back-button" to="/browse"><i className="fas fa-arrow-left"></i></Link>
             <div className="movie-show-container">
                 <video className="movie-show-video" src={this.props.movies[this.props.movieId].videoUrl} autoPlay controls ></video>
             </div>

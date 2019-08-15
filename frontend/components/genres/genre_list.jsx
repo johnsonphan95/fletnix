@@ -12,6 +12,7 @@ class GenreList extends React.Component {
             showLeft: false, 
             showRight: false, 
             listHover: false, 
+            count: 0,
             arrowStyle: {}
         }
         this.shiftLeft = this.shiftLeft.bind(this);
@@ -71,7 +72,6 @@ class GenreList extends React.Component {
     }
 
     handleArrowMouseOver(){
-        console.log('arrow mouse over')
         this.setState({
             arrowStyle: {
                 background: `rgba(14, 14, 14, 0.6)`,
@@ -81,7 +81,6 @@ class GenreList extends React.Component {
     }
 
     handleArrowMouseLeave(){
-        console.log('arrow mouse leave')
         this.setState({
             arrowStyle: {
                 background: `rgba(14, 14, 14, 0.4)`,

@@ -19,7 +19,7 @@ class SearchBar extends React.Component {
     render(){
         return(
             <div className="search-bar-wrapper">
-                <i class="fas fa-search"></i>
+                <i className="fas fa-search"></i>
                 <input type="text"
                     className="search-bar-input"
                     value={this.state.phrase}

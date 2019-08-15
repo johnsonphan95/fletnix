@@ -1,5 +1,6 @@
 .genre-list {
     position: relative;
+    transform: translateX(0);
 }
 
 .genre-list-label {
@@ -32,6 +33,7 @@
     transform: scale(1.5);
     border: 1px solid #141414;
     margin: 0px 25px;
+    z-index: 2;
 }
 
 .genre-link {

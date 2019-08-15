@@ -47,9 +47,9 @@ class MainMovie extends React.Component {
     muteControl(){
         let muteButton; 
         if (this.state.muted === true){
-            muteButton = <div className="mute-button" onClick={this.handleMute}><i class="fas fa-volume-mute"></i></div>
+            muteButton = <div className="mute-button" onClick={this.handleMute}><i className="fas fa-volume-mute"></i></div>
         } else {
-            muteButton = <div className="mute-button" onClick={this.handleMute}><i class="fas fa-volume-up"></i></div>
+            muteButton = <div className="mute-button" onClick={this.handleMute}><i className="fas fa-volume-up"></i></div>
         }
 
         return muteButton;
@@ -70,13 +70,12 @@ class MainMovie extends React.Component {
                  />
                 <div className="main-description-box">
                     <h1 className="main-title">{this.props.movie.title}</h1>
-                    <Link className="main-play-button" to={`/watch/${this.props.movie.id}`}><i class="fas fa-play"></i> Play</Link>
+                    <Link className="main-play-button" to={`/watch/${this.props.movie.id}`}><i className="fas fa-play"></i> Play</Link>
                     <h2 className="watch-now">Watch Now</h2>
                     <p className="main-description">{this.props.movie.description}</p>
                 </div>
                 <div className="main-rating">{this.props.movie.rating}</div>
                 {this.muteControl()}
-                {/* <div className="mute-button" onClick={this.handleMute}><i class="fas fa-volume-off"></i></div> */}
             </div>
         )
     }
