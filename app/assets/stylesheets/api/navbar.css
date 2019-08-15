@@ -30,11 +30,12 @@
 
 .navbar-group {
     width: 100vw;
+    height: 70px;
     position: fixed;
-    background-color: transparent;
+    background: transparent;
     color: white;
-    padding: 15px;
     z-index: 1;
+    transition: background-color ease 2s;
 }
 
 
@@ -43,47 +44,58 @@
     display: inline;
 }
 
-.nav-logo {
-    position: absolute;
-    left: 2.4%;
-    top: 50%;
+.nav-logo-container {
+    position: relative;
+    width: 120px;
+    height: 50px;
+    top: 12px;
+    left: 42px;
 }
 
 .nav-button-container {
     position: absolute;
-    left: 12%;
-    top: 30px;
+    left: 200px;
+    top: 27px;
 }
 
 .nav-button {
     display: inline;
     font-size: 14px;
     font-weight: lighter;
+    margin: 0px 10px;
 }
 
 .nav-button-link {
     color: lightgray;
     text-decoration: none;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .nav-user-dropdown {
     color: lightgrey;
     position: absolute;
+    top: 15px;
     right: 50px;
     height: 40px;
     display: inline-block;
 }
 
-.search-bar-wrapper {
+.search-bar {
+    background: black;
+    position: absolute;
+    right: 190px;
+    top: 20px;
+    border: 1px solid white;
+    padding: 5px;
+}
+
+/* .search-bar-wrapper {
     background: black;
     position: absolute;
     right: 190px;
     top: 22px; 
     border: 1px solid white;
     padding: 5px;
-}
+} */
 
 .search-bar-input{
     border: none;

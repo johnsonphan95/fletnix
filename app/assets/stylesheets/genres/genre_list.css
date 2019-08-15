@@ -1,59 +1,76 @@
 .genre-list {
-    color: white;
-    font-size: 26px;
-    font-weight: 525; 
+    position: relative;
 }
 
 .genre-list-label {
+    position: relative;
     margin-bottom: 15px;
-    margin-left: 3%;
+    left: 50px;
+    font-size: 1.4vw;
+    font-weight: 525; 
 }
 
 .genre-list-ul {
+    position: relative;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     margin-bottom: 4%;
+    width: 100%;
+    left: 50px;
 }
 
 .genre-list-li {
-    margin: 1px 2px;
+    margin: 0px 2px;
     height: 100%;
-    width: 16%
+    width: 16.7%;
+    transition: all .3s ease-in-out;
 }
 
 .genre-list-li:hover {
-    transition: all .4s ease-in-out;
-    transform: scale(1.7);
+    transition: all .3s ease-in-out;
+    transform: scale(1.5);
     border: 1px solid #141414;
-    margin: 0 3%;
+    margin: 0px 25px;
 }
-
-
 
 .genre-link {
     text-decoration: none; 
     color: white;
 }
 
-.genre-item-img {
-    width: 100%;
+.genre-list-wrapper {
+    overflow-x: hidden;
 }
 
-.arrowButton {
+.arrow-button-left {
+    left: 0;
+}
+
+.arrow-button-right {
+    right: 0;
+}
+
+#arrow-button {
+    display: flex;
+    position: absolute;
     font-size: 30px;
     z-index: 1;
-    margin: 1%;
+    height: 100%;
+    width: 50px;
+    color: transparent;
 }
 
-.arrowButton:hover {
-    transition: all .2s ease-in-out;
-    transform: scale(1.8);
+#arrow-button i {
+    margin: auto;
 }
 
 .arrow {
     height: 100%;
 }
 
+.play-tile-button img{
+    width: 15.6vw;
+}
 
 

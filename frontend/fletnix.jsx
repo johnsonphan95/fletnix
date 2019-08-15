@@ -25,4 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
     //
 
     ReactDOM.render(<Root store={store}/>, root);
+
+    function changeNavStyle (){
+        const nav = document.querySelector(".navbar-group");
+        this.scrollY <= 50 ? nav.style.background = "transparent" : nav.style.background = "rgba(1, 1, 1, 1)";
+    }
+
+    window.addEventListener("scroll", changeNavStyle, false);
 });
