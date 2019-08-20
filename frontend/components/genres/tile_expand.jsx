@@ -9,9 +9,7 @@ class TileExpand extends React.Component {
     render(){
         return(
             <div style={{color: "white"}}>
-                {/* {this.props.id} */}
                 {this.props.expand}
-                {/* <ReactPlayer url={this.props.movie.videoUrl}/> */}
             </div>
         )
     }

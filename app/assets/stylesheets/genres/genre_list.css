@@ -17,7 +17,6 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    margin-bottom: 4%;
     width: 92%;
     left: 4%;
 }
@@ -43,7 +42,7 @@
 
 .genre-list-wrapper {
     width: 100vw;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .arrow-button-left {
