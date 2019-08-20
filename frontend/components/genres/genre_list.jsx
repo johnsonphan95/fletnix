@@ -126,7 +126,7 @@ class GenreList extends React.Component {
                         <ul className="genre-list-ul" style={listStyle}>
                             {moviesLists}
                         </ul>
-
+                        {/* <TileExpand expand={this.state.expand}/> */}
                     </div>
                 </div>
             </div>

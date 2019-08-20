@@ -11,8 +11,10 @@ class Api::MoviesController < ApplicationController
     end 
 
     def search 
+       
         query = params[:query]
         @movies = Movie.where('title LIKE ? OR title LIKE ?' , "%#{query.capitalize}%", "%#{query.downcase}%")
+        
         render :index
     end 
     

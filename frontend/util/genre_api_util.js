@@ -12,9 +12,9 @@ export const fetchGenre = (id) => (
     })
 )
 
-export const findGenres = (query) => {
+export const findGenres = (query) => (
     $.ajax({
         method: "GET",
         url: `api/genres/search/?query=${query}`
     })
-}
+)

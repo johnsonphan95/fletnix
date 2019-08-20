@@ -1,4 +1,4 @@
-import * as GenreApiUtil from '../util/genre_api_util'
+import * as GenreApiUtil from '../util/genre_api_util';
 
 export const RECEIVE_GENRES = "RECEIVE_GENRES";
 export const RECEIVE_GENRE = "RECEIVE_GENRE";
@@ -22,5 +22,5 @@ export const fetchGenre = (id) => dispatch => (
 )
 
 export const findGenres = (query) => dispatch => (
-    GenreApiUtil.findGenres(query).then(Genres => dispatch(receiveGenres(movies)))
+    GenreApiUtil.findGenres(query).then(genres => dispatch(receiveGenres(genres)))
 )

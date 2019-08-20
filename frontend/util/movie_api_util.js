@@ -5,9 +5,9 @@ export const fetchMovies = () => (
     })
 )
 
-export const findMovies = (query) => {
+export const findMovies = (query) => (
     $.ajax({
         method: "GET", 
         url: `api/movies/search/?query=${query}`
     })
-}
+)

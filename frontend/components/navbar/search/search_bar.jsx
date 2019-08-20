@@ -1,4 +1,5 @@
 import React from 'react';
+import {debounce} from '../../../util/debounce';
 // import {findMovies} from '../../../actions/movie_actions'
 
 class SearchBar extends React.Component {

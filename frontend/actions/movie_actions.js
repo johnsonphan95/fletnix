@@ -7,11 +7,15 @@ export const receiveMovies = (movies) => ({
     movies
 })
 
-export const fetchMovies = () => dispatch => (
+export const fetchMovies = () => dispatch => {
+    console.log("fetch", MoviesApiUtil.fetchMovies())
+    return(
     MoviesApiUtil.fetchMovies().then(movies => dispatch(receiveMovies(movies)))
-)
+)}
 
-export const findMovies = (query) => dispatch => (
+export const findMovies = (query) => dispatch => {
+    console.log("find", MoviesApiUtil.findMovies("query"))
+    return (
     MoviesApiUtil.findMovies(query).then(movies => dispatch(receiveMovies(movies)))
-)
+)}
 

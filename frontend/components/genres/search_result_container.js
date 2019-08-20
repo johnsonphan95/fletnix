@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import SearchResult from '././search_result';
 import { fetchMovies, findMovies } from '../../actions/movie_actions';
-import { fetchGenres, findGenres } from '../../actions/genre_actions';
+import { findGenres } from '../../actions/genre_actions';
 
 
 const mapStateToProps = ({ entities }) => {
@@ -14,10 +14,9 @@ const mapStateToProps = ({ entities }) => {
 
 const mapDispatchToProps = dispatch => {
     return ({
-        // fetchMovies: () => dispatch(fetchMovies()), 
-        // fetchGenres: () => dispatch(fetchGenres()), 
-        findMovies: () => dispatch(findMovies()), 
-        findGenres: () => dispatch(findGenres()), 
+        fetchMovies: () => dispatch(fetchMovies()),
+        findMovies: (query) => dispatch(findMovies(query)), 
+        findGenres: (query) => dispatch(findGenres(query)), 
     })
 }
 
