@@ -25,14 +25,15 @@
 .genre-list-li {
     /* margin: 0px 2px; */
     height: 100%;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-out;
 }
 
 .genre-list-li:hover {
-    transition: all .3s ease-in-out;
-    transform: scale(1.55);
+    transition: all .2s ease-out;
+    transform: scale(1.5);
+    transform-origin: center;
     /* border: 1px solid #141414; */
-    /* margin: 0px 25px; */
+    margin: 0 2vw;
 }
 
 .genre-link {

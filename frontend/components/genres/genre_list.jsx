@@ -20,60 +20,43 @@ class GenreList extends React.Component {
         this.handleListMouseLeave = this.handleListMouseLeave.bind(this);
         this.handleArrowMouseOver = this.handleArrowMouseOver.bind(this);
         this.handleArrowMouseLeave = this.handleArrowMouseLeave.bind(this);
+        // this.handleResize = this.handleResize.bind(this);
     }
 
     componentDidMount(){
-        // this.props.fetchMovies();
         this.setState({slideWidth: (window.innerWidth * 0.92)/6}), 
         this.setState({length: this.props.moviesList.length})
     }
 
-    // componentWillUpdate(){
-    //     window.scrollTo(0, 0)
-    // }
-
     shiftLeft(e){
         e.preventDefault(); 
-        // if (this.state.startIndex - 1 >= 0) {
-        //     this.setState({
-        //         startIndex: (this.state.startIndex - 1) ,
-        //         endIndex: (this.state.endIndex - 1) 
-        //     })
-            
-        // }
+    
+        let count = this.state.count; 
         let curPos = this.state.currPosition;
         let slide = this.state.slideWidth;
-        // let length = this.state.length;
-        console.log(slide);
-        if (curPos < 0) {
+        let length = this.state.length;
+        if (count > 0 && count <= length - 6) {
             this.setState({
-                currPosition: curPos + slide
+                currPosition: curPos + slide,
+                count: count - 1
             })
         }
-    
     }
 
     shiftRight(e){
         e.preventDefault();
-        
-        // if (this.state.endIndex + 1 <= this.props.genre.moviesLength) {
-        //     this.setState({
-        //         startIndex: (this.state.startIndex + 1),
-        //         endIndex: (this.state.endIndex + 1)
-        //     })
-        // }
+    
+        let count = this.state.count;
         let length = this.state.length;
         let curPos = this.state.currPosition; 
         let slide = this.state.slideWidth; 
-        let endPos = slide * (length - 6);
-        console.log(slide);
-        console.log(endPos)
-        if (curPos >= -(endPos - 1)){
+     
+        if (count >= 0 && count < length - 6){
             this.setState({
-                currPosition: curPos - slide
+                currPosition: curPos - slide, 
+                count: count + 1
             })
         }
-        console.log(curPos);
     }
 
     handleListMouseEnter(){
