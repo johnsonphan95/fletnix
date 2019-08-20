@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import { Player } from 'video-react';
+import TileExpand from './tile_expand';
 
 
 class GenreList extends React.Component {
@@ -11,6 +11,7 @@ class GenreList extends React.Component {
             currPosition: 0,
             slideWidth: 0,
             arrowStyle: {}, 
+            expand: "false"
         }
         this.shiftLeft = this.shiftLeft.bind(this);
         this.shiftRight = this.shiftRight.bind(this);
@@ -103,13 +104,6 @@ class GenreList extends React.Component {
             transition: `transform 500ms ease 0s`
         }
         
-        // let moviesLists = this.props.moviesList.slice(this.state.startIndex, this.state.endIndex).map(id => {
-        //     return(
-        //         <li className="genre-list-li" key={id}>
-        //             <Link className="play-button" to={`/watch/${id}`}><img width="100%" src={this.props.movies[id].photoUrl} /></Link>
-        //         </li>
-        //     )
-        // })
         let moviesLists = this.props.moviesList.map(id => {
             return(
                 <li className="genre-list-li" key={id} >
