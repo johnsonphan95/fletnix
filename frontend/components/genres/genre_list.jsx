@@ -7,8 +7,6 @@ class GenreList extends React.Component {
     constructor(props){
         super(props);
         this.state = { 
-            // startIndex: 0, 
-            // endIndex: 6,
             count: 0,
             currPosition: 0,
             slideWidth: 0,
@@ -20,7 +18,6 @@ class GenreList extends React.Component {
         this.handleListMouseLeave = this.handleListMouseLeave.bind(this);
         this.handleArrowMouseOver = this.handleArrowMouseOver.bind(this);
         this.handleArrowMouseLeave = this.handleArrowMouseLeave.bind(this);
-        // this.handleResize = this.handleResize.bind(this);
     }
 
     componentDidMount(){
