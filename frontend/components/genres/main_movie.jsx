@@ -67,6 +67,7 @@ class MainMovie extends React.Component {
                 url={this.props.movie.videoUrl} 
                 width="100%"
                 height="100%"
+                loop="true"
                  />
                 <div className="main-description-box">
                     <h1 className="main-title">{this.props.movie.title}</h1>
