@@ -8,14 +8,14 @@ class SearchBar extends React.Component {
     }
 
     debounce(func, time) {
-        let that = this
+        let that = this;
         return function (args) {
-            let previousCall = that.lastCall;
-            that.lastCall = Date.now();
-            if (previousCall && ((that.lastCall - previousCall) <= time)) {
-                clearTimeout(that.lastCallTimer)
+            let prev = that.last;
+            that.last = Date.now();
+            if (prev && ((that.last - prev) <= time)) {
+                clearTimeout(that.timer)
             }
-            that.lastCallTimer = setTimeout(() => func(args), time)
+            that.timer = setTimeout(() => func(args), time)
         }
     }
 
