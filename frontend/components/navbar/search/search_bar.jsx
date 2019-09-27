@@ -3,14 +3,24 @@ import React from 'react';
 class SearchBar extends React.Component {
     constructor(props){
         super(props);
-        this.state = {
-            phrase: ""
-        }
         this.handleChange = this.handleChange.bind(this);
+        this.debounce = this.debounce.bind(this);
+    }
+
+    debounce(func, time) {
+        let that = this
+        return function (args) {
+            let previousCall = that.lastCall;
+            that.lastCall = Date.now();
+            if (previousCall && ((that.lastCall - previousCall) <= time)) {
+                clearTimeout(that.lastCallTimer)
+            }
+            that.lastCallTimer = setTimeout(() => func(args), time)
+        }
     }
 
     handleChange(e){
-        this.props.receiveSearchPhrase(e.target.value);
+        this.debounce(this.props.receiveSearchPhrase, 500)(e.currentTarget.value);
     }
 
     render(){
