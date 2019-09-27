@@ -1,6 +1,4 @@
 import React from 'react';
-import {debounce} from '../../../util/debounce';
-// import {findMovies} from '../../../actions/movie_actions'
 
 class SearchBar extends React.Component {
     constructor(props){
@@ -12,9 +10,7 @@ class SearchBar extends React.Component {
     }
 
     handleChange(e){
-        this.setState({phrase: e.target.value}, () => {
-            this.props.receiveSearchPhrase(this.state.phrase)
-        })
+        this.props.receiveSearchPhrase(e.target.value);
     }
 
     render(){
@@ -23,7 +19,6 @@ class SearchBar extends React.Component {
                 <i className="fas fa-search"></i>
                 <input type="text"
                     className="search-bar-input"
-                    value={this.state.phrase}
                     onChange={this.handleChange}
                     placeholder=" Titles, genres..."
                 />

@@ -13,8 +13,10 @@ class SearchResult extends React.Component {
         let genres = Object.values(this.props.genres);
 
         let results = new Set; 
+        
         movies = movies.filter(movie => movie.title.toLowerCase().includes(query.toLowerCase()))
         .forEach(el => results.add(el.id));
+
         genres = genres.filter(genre => genre.genre.toLowerCase().includes(query.toLowerCase()))
         .forEach(genre => genre.movies.forEach(id => results.add(id)));
        
