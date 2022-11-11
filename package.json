@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/johnsonphan95/fletnix#readme",
   "devDependencies": {
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.12"
   },
   "engines": {
     "node": "8.9.4",
